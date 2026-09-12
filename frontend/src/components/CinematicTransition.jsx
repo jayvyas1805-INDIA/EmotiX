@@ -83,15 +83,15 @@ export default function CinematicTransition({ children }) {
                     inset: 0,
                     zIndex: 9000,
                     pointerEvents: 'none',  // NEVER blocks interaction even mid-animation
-                    background: '#04100c',
+                    background: '#07111f',
                     /* Scanline noise */
                     backgroundImage: `
                         repeating-linear-gradient(
                             0deg,
                             transparent,
                             transparent 2px,
-                            rgba(0,255,136,0.015) 2px,
-                            rgba(0,255,136,0.015) 4px
+                            rgba(248,250,252,0.015) 2px,
+                            rgba(248,250,252,0.015) 4px
                         )
                     `,
                 }}
@@ -101,8 +101,8 @@ export default function CinematicTransition({ children }) {
                     position: 'absolute',
                     bottom: 0, left: 0, right: 0,
                     height: 2,
-                    background: 'linear-gradient(90deg, transparent, #00ff88, transparent)',
-                    boxShadow: '0 0 20px 4px rgba(0,255,136,0.5)',
+                    background: 'linear-gradient(90deg, transparent, #f8fafc, transparent)',
+                    boxShadow: '0 0 20px 4px rgba(248,250,252,0.38)',
                 }} />
 
                 {/* Brand mark centred on the panel */}
@@ -110,7 +110,7 @@ export default function CinematicTransition({ children }) {
                     position: 'absolute',
                     top: '50%', left: '50%',
                     transform: 'translate(-50%, -50%)',
-                    color: 'rgba(0,255,136,0.28)',
+                    color: 'rgba(248,250,252,0.42)',
                     fontSize: 11,
                     fontWeight: 700,
                     letterSpacing: '0.32em',
@@ -118,7 +118,7 @@ export default function CinematicTransition({ children }) {
                     fontFamily: 'Inter, system-ui, sans-serif',
                     userSelect: 'none',
                 }}>
-                    MindCare AI
+                    Emotix
                 </div>
             </motion.div>
         </>

@@ -30,11 +30,11 @@ print("="*60 + "\n")
 OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "openrouter/free")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
-COUNSELLING_SYSTEM_PROMPT = """You are MindCare AI, a highly empathetic, natural, and helpful mental health companion.
+COUNSELLING_SYSTEM_PROMPT = """You are Emotix, a highly empathetic, natural, and helpful mental health companion.
 Your role is to listen and provide supportive conversation.
 
 CRITICAL RULES FOR YOUR PERSONA:
-1. ALWAYS act as MindCare AI. Never break character.
+1. ALWAYS act as Emotix. Never break character.
 2. For the first 8-10 interactions, act as a professional counselor conducting a strict clinical intake assessment. You MUST systematically ask questions to uncover all of these categories:
    - Core problem
    - Duration of the issue
@@ -56,7 +56,7 @@ CRITICAL RULES FOR YOUR PERSONA:
 10. CRITICAL RULE: NEVER, UNDER ANY CIRCUMSTANCES, ask the user to rate their feelings, stress, severity, or pain on a numerical scale (e.g., 'scale of 1 to 10'). You must completely avoid using the phrase 'scale of 1-10'. Instead, ask open-ended questions about how they feel.
 """
 
-DOCTOR_SYSTEM_PROMPT = """You are Dr. MindCare, a professional AI mental health counsellor.
+DOCTOR_SYSTEM_PROMPT = """You are Dr. Emotix, a professional AI mental health counsellor.
 You provide personalized, empathetic mental wellness advice based on the user's assessment data.
 Rules:
 - Do NOT diagnose mental disorders
@@ -88,8 +88,8 @@ async def call_openrouter(messages: list, system_prompt: str = None, context: di
                     headers={
                         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
                         "Content-Type": "application/json",
-                        "HTTP-Referer": "https://mindcare-ai.app",
-                        "X-Title": "MindCare AI"
+                        "HTTP-Referer": "https://emotix.app",
+                        "X-Title": "Emotix"
                     },
                     json={
                         "model": OPENROUTER_MODEL,
@@ -154,8 +154,8 @@ async def call_openrouter_stream(messages: list, system_prompt: str = None, cont
                     headers={
                         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
                         "Content-Type": "application/json",
-                        "HTTP-Referer": "https://mindcare-ai.app",
-                        "X-Title": "MindCare AI"
+                        "HTTP-Referer": "https://emotix.app",
+                        "X-Title": "Emotix"
                     },
                     json={
                         "model": OPENROUTER_MODEL,

@@ -1,4 +1,4 @@
-"""FastAPI Main Entry Point for MindCare AI Backend."""
+"""FastAPI Main Entry Point for Emotix Backend."""
 import os
 import logging
 from fastapi import FastAPI

@@ -6,7 +6,7 @@ import numpy as np
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-MODELS_DIR = os.path.abspath(r"d:\MindCare-AI\backend\Pre-trained_Models")
+MODELS_DIR = os.path.abspath(r"d:\EmotiX-main\EmotiX-main\backend\Pre-trained_Models")
 model_path = os.path.join(MODELS_DIR, "Step1_Behaviour", "Best_Mental_Behaviour_Model.pkl")
 encoder_path = os.path.join(MODELS_DIR, "Step1_Behaviour", "Model_Encoders.pkl")
 

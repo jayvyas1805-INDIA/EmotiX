@@ -258,7 +258,7 @@ export default function VoiceAnalysis() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.8, ease: "easeInOut" }}
                         className="fixed inset-0 z-[9999] flex items-center justify-center pointer-events-none"
-                        style={{ background: '#04100c' }}
+                        style={{ background: '#07111f' }}
                     >
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
@@ -268,10 +268,10 @@ export default function VoiceAnalysis() {
                         >
                             <div className="flex items-center justify-center gap-4 mb-2">
                                 <motion.div animate={{ boxShadow: ['0 0 24px rgba(0,255,136,0.25)', '0 0 64px rgba(0,255,136,0.65)', '0 0 24px rgba(0,255,136,0.25)'] }} transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: 52, height: 52, borderRadius: 14, background: 'linear-gradient(135deg, rgba(0,255,136,0.22) 0%, rgba(0,204,106,0.07) 100%)', border: '1.5px solid rgba(0,255,136,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                    <Brain size={26} style={{ color: '#00ff88' }} />
+                                    <Brain size={26} className="brand-logo" />
                                 </motion.div>
                                 <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '32px', fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase', background: 'linear-gradient(170deg, #ffffff 10%, #d1fae5 55%, #6ee7b7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>
-                                    MINDCARE AI
+                                    EMOTIX
                                 </span>
                             </div>
                             <div className="w-48 h-1 rounded-full overflow-hidden mt-2" style={{ background: 'rgba(255,255,255,0.1)' }}>
@@ -280,7 +280,7 @@ export default function VoiceAnalysis() {
                                     animate={{ width: "100%" }}
                                     transition={{ duration: 1.4, ease: "easeInOut" }}
                                     className="h-full"
-                                    style={{ background: '#00ff88' }}
+                                    style={{ background: '#f8fafc' }}
                                 />
                             </div>
                         </motion.div>
@@ -291,7 +291,7 @@ export default function VoiceAnalysis() {
             {/* ── Root Wrapper with Hero Background ── */}
             <div
                 className="min-h-screen text-slate-200 font-sans selection:bg-emerald-500/30 overflow-x-hidden relative flex flex-col pt-24 pb-12"
-                style={{ minHeight: '100vh', fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif", background: '#04100c' }}
+                style={{ minHeight: '100vh', fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif", background: '#07111f' }}
             >
                 {/* Dark radial-gradient overlay */}
                 <div
@@ -326,17 +326,17 @@ export default function VoiceAnalysis() {
                         {/* Premium Branded Header - SCALED UP */}
                         <div className="flex items-center justify-center gap-6 mb-2 mt-4 print:hidden w-full">
                             <motion.div animate={{ boxShadow: ['0 0 30px rgba(0,255,136,0.3)', '0 0 80px rgba(0,255,136,0.7)', '0 0 30px rgba(0,255,136,0.3)'] }} transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: 72, height: 72, borderRadius: 20, background: 'linear-gradient(135deg, rgba(0,255,136,0.22) 0%, rgba(0,204,106,0.07) 100%)', border: '2px solid rgba(0,255,136,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                <Brain size={38} style={{ color: '#00ff88' }} />
+                                <Brain size={38} className="brand-logo" />
                             </motion.div>
                             <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '52px', fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase', background: 'linear-gradient(170deg, #ffffff 10%, #d1fae5 55%, #6ee7b7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>
-                                MINDCARE AI
+                                EMOTIX
                             </span>
                         </div>
                         <button
                             onClick={() => nav('/face')}
                             className="flex items-center gap-2 text-slate-400 transition-colors text-xs font-bold uppercase tracking-widest w-fit group"
                             style={{ transition: 'color 0.3s ease' }}
-                            onMouseEnter={e => e.currentTarget.style.color = '#00ff88'}
+                            onMouseEnter={e => e.currentTarget.style.color = '#f8fafc'}
                             onMouseLeave={e => e.currentTarget.style.color = 'rgb(148, 163, 184)'}
                         >
                             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
@@ -356,7 +356,7 @@ export default function VoiceAnalysis() {
                                 fontWeight: 900,
                                 lineHeight: 0.95,
                                 letterSpacing: '-0.03em',
-                                background: 'linear-gradient(120deg, #00ff88 0%, #00cc6a 40%, #ffffff 70%, #00ff88 100%)',
+                                background: 'linear-gradient(120deg, #ffffff 0%, #cbd5e1 40%, #ffffff 70%, #f8fafc 100%)',
                                 backgroundSize: '250% auto',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
@@ -420,7 +420,7 @@ export default function VoiceAnalysis() {
                                                     >
                                                         <Mic
                                                             size={44}
-                                                            style={{ color: recording ? '#f87171' : '#00ff88' }}
+                                                            style={{ color: recording ? '#f87171' : '#f8fafc' }}
                                                         />
                                                     </motion.div>
                                                     {recording && (
@@ -435,7 +435,7 @@ export default function VoiceAnalysis() {
                                                     <motion.div
                                                         key={i}
                                                         className="w-1.5 rounded-full"
-                                                        style={{ background: recording ? '#00ff88' : 'rgba(255,255,255,0.12)' }}
+                                                        style={{ background: recording ? '#f8fafc' : 'rgba(255,255,255,0.12)' }}
                                                         animate={{ height: heightVal }}
                                                         transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                                                     />
@@ -485,7 +485,7 @@ export default function VoiceAnalysis() {
                                                         onClick={startRecording}
                                                         className="px-10 py-4 text-lg rounded-xl flex items-center gap-2"
                                                         style={{
-                                                            background: 'linear-gradient(135deg, #00ff88, #00cc6a)',
+                                                            background: 'linear-gradient(135deg, #ffffff, #64748b)',
                                                             color: '#000000',
                                                             fontWeight: 800,
                                                             boxShadow: '0 8px 25px rgba(0,255,136,0.3)'
@@ -526,7 +526,7 @@ export default function VoiceAnalysis() {
                                                             disabled={loading}
                                                             className="px-8 py-3 rounded-xl flex items-center gap-2"
                                                             style={{
-                                                                background: 'linear-gradient(135deg, #00ff88, #00cc6a)',
+                                                                background: 'linear-gradient(135deg, #ffffff, #64748b)',
                                                                 color: '#000000',
                                                                 fontWeight: 800,
                                                                 boxShadow: '0 8px 25px rgba(0,255,136,0.3)'
@@ -633,7 +633,7 @@ export default function VoiceAnalysis() {
                                         onClick={() => nav('/severity')}
                                         className="w-full py-4 text-lg font-bold rounded-xl flex items-center justify-center gap-2"
                                         style={{
-                                            background: 'linear-gradient(135deg, #00ff88, #00cc6a)',
+                                            background: 'linear-gradient(135deg, #ffffff, #64748b)',
                                             color: '#000000',
                                             fontWeight: 800,
                                             boxShadow: '0 8px 25px rgba(0,255,136,0.3)'

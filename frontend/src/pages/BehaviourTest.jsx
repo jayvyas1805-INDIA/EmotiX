@@ -38,7 +38,7 @@ function Slider({ label, name, value, min, max, onChange, colorMap }) {
 
                 {/* Custom Thumb Glow (Visual only) */}
                 <div className="absolute w-5 h-5 rounded-full border-2 pointer-events-none group-hover:scale-110 shadow-lg transition-transform"
-                    style={{ left: `calc(${pct}% - 10px)`, borderColor: color, backgroundColor: '#05110d', boxShadow: `0 0 15px ${color}60`, zIndex: 5 }} />
+                    style={{ left: `calc(${pct}% - 10px)`, borderColor: color, backgroundColor: '#0b1220', boxShadow: `0 0 15px ${color}60`, zIndex: 5 }} />
 
                 {/* Invisible Native Input (The actual interactive element) */}
                 <input type="range" min={min} max={max} value={value}
@@ -146,7 +146,7 @@ export default function BehaviourTest() {
                         initial={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.8, ease: "easeInOut" }}
-                        className="fixed inset-0 z-[9999] bg-[#05110d] flex items-center justify-center pointer-events-none"
+                        className="fixed inset-0 z-[9999] bg-[#0b1220] flex items-center justify-center pointer-events-none"
                     >
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
@@ -178,7 +178,7 @@ export default function BehaviourTest() {
                 )}
             </AnimatePresence>
 
-            <div className="relative flex flex-col items-center justify-center min-h-screen py-16 px-4 bg-[#05110d] overflow-hidden font-sans">
+            <div className="relative flex flex-col items-center justify-center min-h-screen py-16 px-4 bg-[#0b1220] overflow-hidden font-sans">
                 {/* Premium Dark Background Orbs */}
                 <div className="absolute inset-0 z-0 pointer-events-none print:hidden">
                     <div
@@ -214,7 +214,7 @@ export default function BehaviourTest() {
                                 flexShrink: 0,
                             }}
                         >
-                            <Brain size={38} style={{ color: '#00ff88' }} />
+                            <Brain size={38} className="brand-logo" />
                         </motion.div>
                         <span style={{
                             fontFamily: "'Space Grotesk', sans-serif",
@@ -228,7 +228,7 @@ export default function BehaviourTest() {
                             backgroundClip: 'text',
                             display: 'inline-block'
                         }}>
-                            MINDCARE AI
+                            EMOTIX
                         </span>
                     </div>
 
@@ -289,7 +289,7 @@ export default function BehaviourTest() {
                                             {manualMode ? (
                                                 <select className="bg-transparent border-none text-white font-bold w-full focus:ring-0 p-0 appearance-none text-xl tracking-wide cursor-pointer"
                                                     value={manualInfo.gender} onChange={e => updateLabel('gender', e.target.value)}>
-                                                    {GENDER_OPTIONS.map(o => <option key={o} value={o} className="bg-[#05110d] text-white">{o}</option>)}
+                                                    {GENDER_OPTIONS.map(o => <option key={o} value={o} className="bg-[#0b1220] text-white">{o}</option>)}
                                                 </select>
                                             ) : (
                                                 <input type="text" className="bg-transparent border-none text-white font-bold w-full focus:ring-0 p-0 text-xl tracking-wide" value={userInfo?.gender || '...'} readOnly />
@@ -300,7 +300,7 @@ export default function BehaviourTest() {
                                             {manualMode ? (
                                                 <select className="bg-transparent border-none text-white font-bold w-full focus:ring-0 p-0 appearance-none text-xl tracking-wide cursor-pointer"
                                                     value={manualInfo.occupation} onChange={e => updateLabel('occupation', e.target.value)}>
-                                                    {OCCUPATION_OPTIONS.map(o => <option key={o} value={o} className="bg-[#05110d] text-white">{o}</option>)}
+                                                    {OCCUPATION_OPTIONS.map(o => <option key={o} value={o} className="bg-[#0b1220] text-white">{o}</option>)}
                                                 </select>
                                             ) : (
                                                 <input type="text" className="bg-transparent border-none text-white font-bold w-full focus:ring-0 p-0 text-xl tracking-wide" value={userInfo?.occupation || '...'} readOnly />
@@ -465,7 +465,7 @@ export default function BehaviourTest() {
                                                 ]} barSize={40}>
                                                     <XAxis dataKey="name" stroke="#475569" tick={{ fontSize: 10 }} />
                                                     <YAxis domain={[0, 10]} stroke="#475569" tick={{ fontSize: 10 }} />
-                                                    <Tooltip contentStyle={{ background: '#05110d', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }} />
+                                                    <Tooltip contentStyle={{ background: '#0b1220', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }} />
                                                     <Bar dataKey="val" radius={[6, 6, 0, 0]}>
                                                         {[0, 1, 2, 3].map((entry, index) => (
                                                             <Cell key={`cell-${index}`} fill={['#10B981', '#F59E0B', '#2dd4bf', '#8B5CF6'][index]} />

@@ -27,15 +27,15 @@ def send_otp_email(receiver_email: str, otp: str):
         return True  # Return success so the frontend flow continues normally
 
     msg = MIMEMultipart("alternative")
-    msg["Subject"] = "Your MindCare AI Password Reset OTP"
-    msg["From"] = f"MindCare AI <{smtp_from}>"
+    msg["Subject"] = "Your Emotix Password Reset OTP"
+    msg["From"] = f"Emotix <{smtp_from}>"
     msg["To"] = receiver_email
 
     html_content = f"""
     <html>
       <body style="font-family: Arial, sans-serif; background-color: #05110d; color: #ffffff; padding: 20px; text-align: center;">
         <div style="max-width: 500px; margin: 0 auto; background-color: #0a1f18; padding: 30px; border-radius: 12px; border: 1px solid rgba(0,255,136,0.3);">
-            <h2 style="color: #00ff88; margin-bottom: 10px;">MindCare AI</h2>
+            <h2 style="color: #00ff88; margin-bottom: 10px;">Emotix</h2>
             <h3 style="color: #ffffff;">Password Reset Request</h3>
             <p style="color: #cbd5e1; font-size: 14px;">You requested a password reset. Use the OTP below to proceed. It is valid for 10 minutes.</p>
             <div style="margin: 30px 0; padding: 15px; background: rgba(0,0,0,0.4); border-radius: 8px; letter-spacing: 5px; font-size: 24px; font-weight: bold; color: #00ff88;">

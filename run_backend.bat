@@ -1,10 +1,10 @@
 @echo off
-title MindCare AI - Backend Server
+title EmotiX - Backend Server
 color 0A
 
 echo.
 echo ============================================
-echo    MindCare AI - Backend Server
+echo    EmotiX - Backend Server
 echo ============================================
 echo.
 

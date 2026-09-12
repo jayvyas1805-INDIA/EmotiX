@@ -87,10 +87,10 @@ const fragmentShader = /* glsl */`
   varying float vElevation;
 
   void main(){
-    // Deep midnight green base → neon green peak
-    vec3 dark    = vec3(0.012, 0.043, 0.027);   // #031b0e
-    vec3 mid     = vec3(0.010, 0.120, 0.065);   // #031e11 richer
-    vec3 accent  = vec3(0.000, 1.000, 0.533);   // #00ff88
+    // Deep midnight base → white and slate peak
+    vec3 dark    = vec3(0.027, 0.067, 0.122);   // #07111f
+    vec3 mid     = vec3(0.039, 0.165, 0.263);   // #0a2a43 richer
+    vec3 accent  = vec3(0.941, 0.961, 0.976);   // #f0f4f8
 
     float n = clamp(vElevation * 0.5 + 0.5, 0.0, 1.0);
 

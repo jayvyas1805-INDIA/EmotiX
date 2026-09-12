@@ -18,32 +18,32 @@ const features = [
     {
         icon: Brain, title: 'Behaviour AI', num: '01',
         desc: 'ML-powered stress pattern analysis from lifestyle data and daily behavioural signals.',
-        accent: '#00ff88',
+        accent: '#f8fafc',
     },
     {
         icon: MessageCircle, title: 'Smart Chatbot', num: '02',
         desc: 'NLP-powered counselling with real-time crisis detection and empathetic responses.',
-        accent: '#00cc9a',
+        accent: '#cbd5e1',
     },
     {
         icon: Camera, title: 'Facial Emotion', num: '03',
         desc: 'CNN deep-learning analysis of video frames to decode micro-expressions.',
-        accent: '#00dda0',
+        accent: '#e2e8f0',
     },
     {
         icon: Mic, title: 'Voice Stress', num: '04',
         desc: 'Audio feature extraction using MFCCs for precise voice-based mood detection.',
-        accent: '#00ffaa',
+        accent: '#f1f5f9',
     },
     {
         icon: TrendingUp, title: 'Severity Engine', num: '05',
         desc: 'Multi-modal fusion scoring with intelligent clinical risk classification.',
-        accent: '#00ee88',
+        accent: '#94a3b8',
     },
     {
         icon: Shield, title: 'Emergency Safety', num: '06',
         desc: 'Automatic high-risk detection with instant emergency helpline routing.',
-        accent: '#22ffaa',
+        accent: '#ffffff',
     },
 ]
 
@@ -136,7 +136,7 @@ function TiltCard({ children, className, style }) {
 }
 
 /* ─── Floating orb decorations ───────────────────────────────────────────── */
-function FloatingOrb({ size, x, y, opacity, delay, color = '#00ff88' }) {
+function FloatingOrb({ size, x, y, opacity, delay, color = '#f8fafc' }) {
     return (
         <motion.div
             className="absolute rounded-full pointer-events-none"
@@ -156,7 +156,7 @@ function FloatingOrb({ size, x, y, opacity, delay, color = '#00ff88' }) {
 
 /* ─── Kinetic Brand Title ────────────────────────────────────────────────── */
 /* Active Theory–style: per-char 3D entry + live cursor-reactive tilt + chromatic aberration */
-const BRAND_CHARS = 'MINDCARE\u00a0AI'.split('')
+const BRAND_CHARS = 'EMOTIX'.split('')
 
 const charEntry = {
     hidden: (i) => ({
@@ -193,22 +193,22 @@ function KineticBrandTitle({ mouseX, mouseY }) {
             <motion.div
                 animate={{
                     boxShadow: [
-                        '0 0 24px rgba(0,255,136,0.25)',
-                        '0 0 64px rgba(0,255,136,0.65)',
-                        '0 0 24px rgba(0,255,136,0.25)',
+                        '0 0 24px rgba(52,211,153,0.22)',
+                        '0 0 64px rgba(52,211,153,0.65)',
+                        '0 0 24px rgba(52,211,153,0.22)',
                     ],
                 }}
                 transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
                 style={{
                     width: 60, height: 60,
                     borderRadius: 16,
-                    background: 'linear-gradient(135deg, rgba(0,255,136,0.22) 0%, rgba(0,204,106,0.07) 100%)',
-                    border: '1.5px solid rgba(0,255,136,0.45)',
+                    background: 'linear-gradient(135deg, #172a2a 0%, #07111f 100%)',
+                    border: '1.5px solid rgba(52,211,153,0.58)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     flexShrink: 0,
                 }}
             >
-                <Brain size={28} style={{ color: '#00ff88' }} />
+                <Brain size={28} className="brand-logo" />
             </motion.div>
 
             {/* Kinetic wordmark — cursor-tilted container, per-char anims */}
@@ -301,16 +301,16 @@ function HeroParticles() {
                         width: p.w, height: p.h,
                         opacity: p.opacity,
                         borderRadius: p.type === 'ring' ? '50%' : p.type === 'square' ? 2 : 0,
-                        border: p.type !== 'line' ? '1px solid rgba(0,255,136,0.6)' : 'none',
+                        border: p.type !== 'line' ? '1px solid rgba(248,250,252,0.5)' : 'none',
                         background: p.type === 'line'
-                            ? 'linear-gradient(90deg, transparent, rgba(0,255,136,0.5), transparent)'
+                            ? 'linear-gradient(90deg, transparent, rgba(248,250,252,0.4), transparent)'
                             : p.type === 'square'
-                                ? 'rgba(0,255,136,0.15)'
+                                ? 'rgba(248,250,252,0.12)'
                                 : 'transparent',
                         boxShadow: p.type === 'ring'
-                            ? `0 0 ${Math.round(p.w * 0.15)}px rgba(0,255,136,0.25)`
+                            ? `0 0 ${Math.round(p.w * 0.15)}px rgba(248,250,252,0.18)`
                             : p.type === 'square'
-                                ? '0 0 8px rgba(0,255,136,0.35)'
+                                ? '0 0 8px rgba(248,250,252,0.25)'
                                 : 'none',
                         filter: p.type === 'ring' ? 'blur(0.5px)' : 'none',
                     }}
@@ -411,8 +411,8 @@ export default function Landing() {
           100% { background-position: 0% 50%; }
         }
         @keyframes navBorderGlow {
-          0%,100% { border-bottom-color: rgba(0,255,136,0.08); }
-          50%      { border-bottom-color: rgba(0,255,136,0.22); }
+          0%,100% { border-bottom-color: rgba(248,250,252,0.06); }
+          50%      { border-bottom-color: rgba(248,250,252,0.16); }
         }
         .nav-glow { animation: navBorderGlow 4s ease-in-out infinite; }
         .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -431,7 +431,7 @@ export default function Landing() {
                         background: 'rgba(8,8,8,0.72)',
                         backdropFilter: 'blur(24px)',
                         WebkitBackdropFilter: 'blur(24px)',
-                        borderBottom: '1px solid rgba(0,255,136,0.10)',
+                        borderBottom: '1px solid rgba(248,250,252,0.08)',
                     }}
                 >
                     <div className="w-full max-w-[1600px] mx-auto flex items-center justify-between px-6 md:px-16 h-16">
@@ -442,14 +442,14 @@ export default function Landing() {
                                 transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
                                 className="w-8 h-8 rounded-lg flex items-center justify-center at-pulse"
                                 style={{
-                                    background: 'linear-gradient(135deg, #00ff88, #00cc6a)',
-                                    boxShadow: '0 0 16px rgba(0,255,136,0.4)',
+                                    background: 'linear-gradient(135deg, #173b35, #07111f)',
+                                    boxShadow: '0 0 18px rgba(52,211,153,0.5)',
                                 }}
                             >
-                                <Brain size={15} className="text-black" />
+                                <Brain size={15} className="brand-logo text-black" />
                             </motion.div>
                             <span style={{ fontSize: 14, fontWeight: 700, letterSpacing: '0.05em', color: '#f0f0f0' }}>
-                                Mind<span style={{ color: '#00ff88' }}>Care</span> AI
+                                EmotiX
                             </span>
                         </div>
 
@@ -469,7 +469,7 @@ export default function Landing() {
                                         background: 'none',
                                         border: 'none',
                                     }}
-                                    onMouseEnter={e => e.currentTarget.style.color = '#00ff88'}
+                                    onMouseEnter={e => e.currentTarget.style.color = '#f8fafc'}
                                     onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
                                 >
                                     <GlitchText mode="hover" intensity={0.6}>{item.label}</GlitchText>
@@ -496,7 +496,7 @@ export default function Landing() {
                                 Sign In
                             </motion.button>
                             <motion.button
-                                whileHover={{ scale: 1.03, boxShadow: '0 0 28px rgba(0,255,136,0.45)' }}
+                                    whileHover={{ scale: 1.03, boxShadow: '0 0 28px rgba(248,250,252,0.32)' }}
                                 whileTap={{ scale: 0.97 }}
                                 onClick={() => nav('/register')}
                                 className="at-btn-primary"
@@ -526,7 +526,7 @@ export default function Landing() {
                         background: `
               radial-gradient(ellipse 80% 60% at 50% 100%, rgba(8,8,8,0.9) 0%, transparent 70%),
               radial-gradient(ellipse 60% 50% at 0% 50%, rgba(8,8,8,0.5) 0%, transparent 60%),
-              radial-gradient(ellipse 40% 40% at 100% 20%, rgba(0,255,136,0.04) 0%, transparent 60%)
+              radial-gradient(ellipse 40% 40% at 100% 20%, rgba(248,250,252,0.035) 0%, transparent 60%)
             `,
                     }}
                     aria-hidden="true"
@@ -560,12 +560,12 @@ export default function Landing() {
 
                             {/* Eyebrow */}
                             <motion.div variants={fadeUp} className="flex items-center gap-3">
-                                <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#00ff88', boxShadow: '0 0 10px rgba(0,255,136,0.8)' }} />
+                                <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#f8fafc', boxShadow: '0 0 10px rgba(248,250,252,0.7)' }} />
                                 <GlitchText
                                     mode="auto"
                                     intensity={0.8}
                                     className="font-overline"
-                                    style={{ fontSize: 10, letterSpacing: '0.26em', textTransform: 'uppercase', color: '#00ff88' }}
+                                    style={{ fontSize: 10, letterSpacing: '0.26em', textTransform: 'uppercase', color: '#f8fafc' }}
                                 >
                                     Multimodal AI Mental Health
                                 </GlitchText>
@@ -589,7 +589,7 @@ export default function Landing() {
                                             fontWeight: 700,
                                             letterSpacing: '0.28em',
                                             textTransform: 'uppercase',
-                                            color: 'rgba(52,211,153,0.80)',
+                                            color: 'rgba(248,250,252,0.80)',
                                         }}
                                     >
                                         Understanding
@@ -603,7 +603,7 @@ export default function Landing() {
                                             lineHeight: 0.95,
                                             letterSpacing: '-0.03em',
                                             display: 'block',
-                                            background: 'linear-gradient(120deg, #00ff88 0%, #00cc6a 40%, #ffffff 70%, #00ff88 100%)',
+                                            background: 'linear-gradient(120deg, #ffffff 0%, #cbd5e1 40%, #ffffff 70%, #f8fafc 100%)',
                                             backgroundSize: '250% auto',
                                             WebkitBackgroundClip: 'text',
                                             WebkitTextFillColor: 'transparent',
@@ -652,16 +652,16 @@ export default function Landing() {
                                 }}
                             >
                                 Multimodal AI analyzing{' '}
-                                <span style={{ color: 'rgba(167,243,208,0.85)', fontWeight: 500 }}>behavior</span>,{' '}
-                                <span style={{ color: 'rgba(167,243,208,0.85)', fontWeight: 500 }}>facial expressions</span>{' '}
-                                &amp; <span style={{ color: 'rgba(167,243,208,0.85)', fontWeight: 500 }}>vocal stress</span>{' '}
+                                <span style={{ color: 'rgba(226,232,240,0.85)', fontWeight: 500 }}>behavior</span>,{' '}
+                                <span style={{ color: 'rgba(226,232,240,0.85)', fontWeight: 500 }}>facial expressions</span>{' '}
+                                &amp; <span style={{ color: 'rgba(226,232,240,0.85)', fontWeight: 500 }}>vocal stress</span>{' '}
                                 — delivering real-time clinical insights and personalized mental health support.
                             </motion.p>
 
                             {/* CTAs */}
                             <motion.div variants={fadeUp} custom={5} className="flex items-center gap-4 flex-wrap">
                                 <motion.button
-                                    whileHover={{ scale: 1.03, boxShadow: '0 0 40px rgba(0,255,136,0.45), 0 8px 32px rgba(0,0,0,0.3)' }}
+                                    whileHover={{ scale: 1.03, boxShadow: '0 0 40px rgba(248,250,252,0.32), 0 8px 32px rgba(0,0,0,0.3)' }}
                                     whileTap={{ scale: 0.97 }}
                                     onClick={() => nav('/register')}
                                     className="at-btn-primary group flex items-center gap-2.5"
@@ -695,7 +695,7 @@ export default function Landing() {
                                     { value: 2, suffix: 'min', label: 'Per Assessment' },
                                 ].map(({ value, suffix, label }, i) => (
                                     <motion.div key={label} variants={fadeUp} custom={i} className="flex flex-col gap-1">
-                                        <span style={{ fontSize: 'clamp(22px, 3vw, 32px)', fontWeight: 800, color: '#00ff88', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                                        <span style={{ fontSize: 'clamp(22px, 3vw, 32px)', fontWeight: 800, color: '#f8fafc', letterSpacing: '-0.02em', lineHeight: 1 }}>
                                             <CountUp target={value} suffix={suffix} />
                                         </span>
                                         <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
@@ -731,15 +731,15 @@ export default function Landing() {
             <section
                 id="features"
                 className="features-section relative w-full"
-                style={{ background: 'linear-gradient(180deg, #05110d 0%, #04100c 100%)', padding: 'clamp(60px, 10vw, 140px) clamp(20px, 5vw, 60px)', position: 'relative', zIndex: 10 }}
+                style={{ background: 'linear-gradient(180deg, #0b1220 0%, #07111f 100%)', padding: 'clamp(60px, 10vw, 140px) clamp(20px, 5vw, 60px)', position: 'relative', zIndex: 10 }}
             >
                 {/* Subtle grid lines */}
                 <div
                     className="absolute inset-0 pointer-events-none"
                     style={{
                         backgroundImage: `
-              linear-gradient(rgba(0,255,136,0.03) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0,255,136,0.03) 1px, transparent 1px)
+              linear-gradient(rgba(248,250,252,0.03) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(248,250,252,0.03) 1px, transparent 1px)
             `,
                         backgroundSize: '80px 80px',
                     }}
@@ -752,7 +752,7 @@ export default function Landing() {
                         variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-80px' }}
                         className="flex flex-col gap-4"
                     >
-                        <span className="font-overline" style={{ fontSize: 10, letterSpacing: '0.26em', textTransform: 'uppercase', color: '#00ff88' }}>
+                        <span className="font-overline" style={{ fontSize: 10, letterSpacing: '0.26em', textTransform: 'uppercase', color: '#f8fafc' }}>
                             Capabilities
                         </span>
                         <h2 className="scroll-reveal-heading font-display" style={{ fontSize: 'clamp(32px, 5vw, 64px)', fontWeight: 700, letterSpacing: '-0.02em', color: '#f0f0f0', lineHeight: 1.05, maxWidth: 640 }}>
@@ -797,7 +797,7 @@ export default function Landing() {
                                             className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
                                             style={{ background: `${f.accent}12`, border: `1px solid ${f.accent}25` }}
                                         >
-                                            <f.icon size={18} style={{ color: f.accent }} />
+                                            <f.icon size={18} className="logo-glow" />
                                         </div>
                                         <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.18)', fontWeight: 600, letterSpacing: '0.1em' }}>
                                             {f.num}
@@ -827,14 +827,14 @@ export default function Landing() {
             <section
                 id="how-it-works"
                 className="relative w-full"
-                style={{ background: '#04100c', padding: 'clamp(60px, 10vw, 140px) clamp(20px, 5vw, 60px)', position: 'relative', zIndex: 10 }}
+                style={{ background: '#07111f', padding: 'clamp(60px, 10vw, 140px) clamp(20px, 5vw, 60px)', position: 'relative', zIndex: 10 }}
             >
                 {/* Green ambient bloom */}
                 <div
                     className="absolute pointer-events-none"
                     style={{
                         width: 600, height: 600, borderRadius: '50%',
-                        background: 'radial-gradient(circle, rgba(0,255,136,0.06) 0%, transparent 65%)',
+                        background: 'radial-gradient(circle, rgba(248,250,252,0.05) 0%, transparent 65%)',
                         top: '50%', left: '50%', transform: 'translate(-50%,-50%)',
                         filter: 'blur(60px)',
                     }}
@@ -847,7 +847,7 @@ export default function Landing() {
                         variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
                         className="flex flex-col gap-4"
                     >
-                        <span className="font-overline" style={{ fontSize: 10, letterSpacing: '0.26em', textTransform: 'uppercase', color: '#00ff88' }}>
+                        <span className="font-overline" style={{ fontSize: 10, letterSpacing: '0.26em', textTransform: 'uppercase', color: '#f8fafc' }}>
                             Process
                         </span>
                         <h2 className="scroll-reveal-heading font-display" style={{ fontSize: 'clamp(32px, 5vw, 64px)', fontWeight: 700, letterSpacing: '-0.02em', color: '#f0f0f0', lineHeight: 1.05 }}>
@@ -885,19 +885,19 @@ export default function Landing() {
                                 <div
                                     className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center"
                                     style={{
-                                        background: 'rgba(0,255,136,0.06)',
-                                        border: '1px solid rgba(0,255,136,0.2)',
+                                        background: 'rgba(248,250,252,0.06)',
+                                        border: '1px solid rgba(248,250,252,0.18)',
                                         transition: 'background 0.3s ease, border-color 0.3s ease',
                                     }}
                                 >
-                                    <span style={{ fontSize: 11, fontWeight: 800, color: '#00ff88', letterSpacing: '0.05em' }}>
+                                    <span style={{ fontSize: 11, fontWeight: 800, color: '#f8fafc', letterSpacing: '0.05em' }}>
                                         {step.n}
                                     </span>
                                 </div>
 
                                 <div className="flex flex-col gap-1.5">
                                     <div className="flex items-center gap-2">
-                                        <step.icon size={13} style={{ color: '#00ff88', opacity: 0.7 }} />
+                                        <step.icon size={13} className="logo-glow" />
                                         <span className="font-display" style={{ fontSize: 13, fontWeight: 600, color: '#f0f0f0', letterSpacing: '-0.01em' }}>
                                             {step.title}
                                         </span>
@@ -916,9 +916,9 @@ export default function Landing() {
             <section
                 id="problem"
                 className="relative w-full"
-                style={{ background: 'linear-gradient(180deg, #04100c 0%, #051209 100%)', padding: 'clamp(80px, 12vw, 160px) clamp(20px, 5vw, 60px)', position: 'relative', zIndex: 10 }}
+                style={{ background: 'linear-gradient(180deg, #07111f 0%, #0b1220 100%)', padding: 'clamp(80px, 12vw, 160px) clamp(20px, 5vw, 60px)', position: 'relative', zIndex: 10 }}
             >
-                <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(0,255,136,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,136,0.022) 1px, transparent 1px)', backgroundSize: '100px 100px' }} aria-hidden="true" />
+                <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(248,250,252,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(248,250,252,0.022) 1px, transparent 1px)', backgroundSize: '100px 100px' }} aria-hidden="true" />
 
                 <div className="max-w-7xl mx-auto flex flex-col gap-24 relative z-10">
 
@@ -929,7 +929,7 @@ export default function Landing() {
                         className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
                     >
                         <div className="flex flex-col gap-6">
-                            <span className="font-overline" style={{ color: '#00ff88', fontSize: 10, letterSpacing: '0.26em' }}>The Problem</span>
+                            <span className="font-overline" style={{ color: '#f8fafc', fontSize: 10, letterSpacing: '0.26em' }}>The Problem</span>
                             <h2 className="font-display" style={{ fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: 700, letterSpacing: '-0.02em', color: '#f0f0f0', lineHeight: 1.1 }}>
                                 Human emotion is{' '}
                                 <span className="at-gradient-text">too complex</span>{' '}
@@ -938,9 +938,9 @@ export default function Landing() {
                             <p className="at-body" style={{ fontSize: 15, color: 'rgba(203,213,225,0.58)', lineHeight: 1.85, maxWidth: 480 }}>
                                 A chatbot can read your words — but words are just 7% of human communication.
                                 True mental health insight demands reading{' '}
-                                <strong style={{ color: 'rgba(167,243,208,0.9)', fontWeight: 600 }}>facial micro-expressions</strong>,{' '}
-                                <strong style={{ color: 'rgba(167,243,208,0.9)', fontWeight: 600 }}>vocal tremors</strong>, and{' '}
-                                <strong style={{ color: 'rgba(167,243,208,0.9)', fontWeight: 600 }}>behavioural patterns</strong> — simultaneously.
+                                <strong style={{ color: 'rgba(226,232,240,0.9)', fontWeight: 600 }}>facial micro-expressions</strong>,{' '}
+                                <strong style={{ color: 'rgba(226,232,240,0.9)', fontWeight: 600 }}>vocal tremors</strong>, and{' '}
+                                <strong style={{ color: 'rgba(226,232,240,0.9)', fontWeight: 600 }}>behavioural patterns</strong> — simultaneously.
                             </p>
                             <div className="flex flex-col gap-3 mt-2">
                                 {[
@@ -955,7 +955,7 @@ export default function Landing() {
                                         onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.06)'}
                                     >
                                         <div style={{ width: 36, height: 36, borderRadius: 8, background: 'rgba(0,255,136,0.08)', border: '1px solid rgba(0,255,136,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                            <Icon size={16} style={{ color: '#00ff88' }} />
+                                            <Icon size={16} style={{ color: '#f8fafc' }} />
                                         </div>
                                         <div className="flex flex-col gap-0.5 flex-1">
                                             <div className="flex items-center gap-2">
@@ -964,9 +964,9 @@ export default function Landing() {
                                                     <motion.span
                                                         animate={{ opacity: [1, 0.3, 1], scale: [1, 1.3, 1] }}
                                                         transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
-                                                        style={{ width: 5, height: 5, borderRadius: '50%', background: '#00ff88', display: 'inline-block', flexShrink: 0 }}
+                                                        style={{ width: 5, height: 5, borderRadius: '50%', background: '#f8fafc', display: 'inline-block', flexShrink: 0 }}
                                                     />
-                                                    <span style={{ fontSize: 9, color: '#00ff88', fontFamily: "'Space Mono',monospace", letterSpacing: '0.12em', textTransform: 'uppercase', lineHeight: 1 }}>{badge}</span>
+                                                    <span style={{ fontSize: 9, color: '#f8fafc', fontFamily: "'Space Mono',monospace", letterSpacing: '0.12em', textTransform: 'uppercase', lineHeight: 1 }}>{badge}</span>
                                                 </span>
                                             </div>
                                             <span style={{ fontSize: 11, color: 'rgba(203,213,225,0.45)' }}>{desc}</span>
@@ -1055,7 +1055,7 @@ export default function Landing() {
                                 Complete picture.
                             </h2>
                             <p className="at-body" style={{ fontSize: 15, color: 'rgba(203,213,225,0.58)', lineHeight: 1.85, maxWidth: 480 }}>
-                                MindCare AI fuses all four modalities into a single severity score — giving you the accuracy of a clinical multi-session assessment in under two minutes.
+                                Emotix fuses all four modalities into a single severity score — giving you the accuracy of a clinical multi-session assessment in under two minutes.
                             </p>
                             <div className="flex flex-col gap-2 mt-2">
                                 {[
@@ -1079,7 +1079,7 @@ export default function Landing() {
             <section
                 id="technology"
                 className="relative w-full"
-                style={{ background: '#040f0b', padding: 'clamp(80px, 12vw, 160px) clamp(20px, 5vw, 60px)', position: 'relative', zIndex: 10 }}
+                style={{ background: 'linear-gradient(180deg, #0b1220 0%, #07111f 100%)', padding: 'clamp(80px, 12vw, 160px) clamp(20px, 5vw, 60px)', position: 'relative', zIndex: 10 }}
             >
                 <div className="max-w-7xl mx-auto flex flex-col gap-14 relative z-10">
                     <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-80px' }} className="flex flex-col gap-4">
@@ -1098,28 +1098,28 @@ export default function Landing() {
                                 icon: Camera, num: '01', title: 'Facial Emotion', subtitle: 'ResNet50V2 Architecture',
                                 desc: 'Processes facial image frames to provide baseline emotion detection. Capable of baseline visual recognition with a 63% accuracy rate.',
                                 tags: ['ResNet50V2', 'TensorFlow', 'OpenCV'],
-                                accent: '#00ff88',
+                                accent: '#2dd4bf',
                                 img: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&q=70',
                             },
                             {
                                 icon: Mic, num: '02', title: 'Voice Stress', subtitle: 'Custom CNN Analysis',
                                 desc: 'Extracts 22 MFCCs (yielding 2,376 features) per audio frame. A highly stable model identifying 7 emotional states from vocal patterns with 98% accuracy.',
                                 tags: ['Custom CNN', 'MFCC', 'LibROSA'],
-                                accent: '#00dda0',
+                                accent: '#5eead4',
                                 img: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=400&q=70',
                             },
                             {
                                 icon: Brain, num: '03', title: 'Behaviour AI', subtitle: 'Gradient Boosting',
                                 desc: 'Analyzes user behavior patterns and interaction metadata to detect non-linear stress triggers and behavioral shifts with 94% accuracy.',
                                 tags: ['Gradient Boosting', 'Metadata', 'Scikit-learn'],
-                                accent: '#00cc9a',
+                                accent: '#38bdf8',
                                 img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=70',
                             },
                             {
                                 icon: MessageCircle, num: '04', title: 'Smart Chatbot & Fusion', subtitle: 'LLM + Weighted Fusion',
                                 desc: 'Acts as the central fusion engine. If visual confidence is low, the system compensates using the 98% accurate vocal and 94% accurate behavioral models for ultimate reliability.',
                                 tags: ['LLM', 'Fusion Engine', 'OpenRouter', 'NLP'],
-                                accent: '#22ffaa',
+                                accent: '#7dd3fc',
                                 img: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&q=70',
                             },
                         ].map((card) => (
@@ -1137,8 +1137,8 @@ export default function Landing() {
                                     </div>
                                 )}
                                 <div className="relative z-10 flex items-start justify-between">
-                                    <div style={{ width: 42, height: 42, borderRadius: 10, background: `${card.accent}14`, border: `1px solid ${card.accent}28`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <card.icon size={18} style={{ color: card.accent }} />
+                                    <div style={{ width: 42, height: 42, borderRadius: 10, background: 'linear-gradient(135deg, rgba(52,211,153,0.18), rgba(7,17,31,0.9))', border: '1px solid rgba(52,211,153,0.58)', boxShadow: '0 0 16px rgba(52,211,153,0.32)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        <card.icon size={18} className="brand-logo" />
                                     </div>
                                     <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.18)', fontWeight: 700, letterSpacing: '0.1em' }}>{card.num}</span>
                                 </div>
@@ -1165,18 +1165,18 @@ export default function Landing() {
             <section
                 id="security"
                 className="relative w-full"
-                style={{ background: 'linear-gradient(180deg, #040f0b 0%, #030e09 100%)', padding: 'clamp(80px, 12vw, 160px) clamp(20px, 5vw, 60px)', position: 'relative', zIndex: 10 }}
+                style={{ background: 'linear-gradient(180deg, #0b1220 0%, #07111f 100%)', padding: 'clamp(80px, 12vw, 160px) clamp(20px, 5vw, 60px)', position: 'relative', zIndex: 10 }}
             >
-                <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(0,255,136,0.055) 0%, transparent 70%)' }} aria-hidden="true" />
+                <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(248,250,252,0.05) 0%, transparent 70%)' }} aria-hidden="true" />
                 <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-14 relative z-10">
                     <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="flex flex-col items-center gap-5">
-                        <span className="font-overline" style={{ color: '#00ff88', fontSize: 10, letterSpacing: '0.26em' }}>Trust &amp; Compliance</span>
+                        <span className="font-overline" style={{ color: '#f8fafc', fontSize: 10, letterSpacing: '0.26em' }}>Trust &amp; Compliance</span>
                         <h2 className="font-display" style={{ fontSize: 'clamp(28px, 4vw, 56px)', fontWeight: 700, letterSpacing: '-0.02em', color: '#f0f0f0', lineHeight: 1.05, maxWidth: 520 }}>
                             Your data is{' '}
                             <span className="at-gradient-text">never our product.</span>
                         </h2>
                         <p className="at-body" style={{ fontSize: 15, color: 'rgba(203,213,225,0.55)', lineHeight: 1.85, maxWidth: 480 }}>
-                            Mental health is deeply personal. MindCare AI is engineered from the ground up to keep your sessions private, your data secure, and your identity protected.
+                            Mental health is deeply personal. Emotix is engineered from the ground up to keep your sessions private, your data secure, and your identity protected.
                         </p>
                     </motion.div>
 
@@ -1190,15 +1190,15 @@ export default function Landing() {
                                 key={title}
                                 variants={fadeUp}
                                 className="flex flex-col items-center text-center gap-5 p-7 rounded-2xl"
-                                style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(0,255,136,0.12)', backdropFilter: 'blur(12px)', transition: 'box-shadow 0.4s ease, border-color 0.4s ease' }}
-                                whileHover={{ boxShadow: '0 0 45px rgba(0,255,136,0.18)', borderColor: 'rgba(0,255,136,0.28)', transition: { duration: 0.3 } }}
+                                style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(226,232,240,0.16)', backdropFilter: 'blur(12px)', transition: 'box-shadow 0.4s ease, border-color 0.4s ease' }}
+                                whileHover={{ boxShadow: '0 0 45px rgba(248,250,252,0.14)', borderColor: 'rgba(248,250,252,0.3)', transition: { duration: 0.3 } }}
                             >
                                 <motion.div
-                                    animate={{ boxShadow: ['0 0 18px rgba(0,255,136,0.2)', '0 0 38px rgba(0,255,136,0.48)', '0 0 18px rgba(0,255,136,0.2)'] }}
+                                    animate={{ boxShadow: ['0 0 18px rgba(52,211,153,0.24)', '0 0 38px rgba(52,211,153,0.62)', '0 0 18px rgba(52,211,153,0.24)'] }}
                                     transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-                                    style={{ width: 64, height: 64, borderRadius: 18, background: 'linear-gradient(135deg, rgba(0,255,136,0.15), rgba(0,204,106,0.06))', border: '1px solid rgba(0,255,136,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                                    style={{ width: 64, height: 64, borderRadius: 18, background: 'linear-gradient(135deg, rgba(52,211,153,0.18), rgba(7,17,31,0.9))', border: '1px solid rgba(52,211,153,0.58)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                 >
-                                    <Icon size={26} style={{ color: '#00ff88' }} />
+                                    <Icon size={26} className="brand-logo" />
                                 </motion.div>
                                 <h3 className="font-display" style={{ fontSize: 15, fontWeight: 600, color: '#f0f0f0', letterSpacing: '-0.01em' }}>{title}</h3>
                                 <p className="at-body" style={{ fontSize: 12.5, color: 'rgba(203,213,225,0.50)', lineHeight: 1.75, fontWeight: 300 }}>{desc}</p>
@@ -1212,25 +1212,25 @@ export default function Landing() {
             <section
                 id="about"
                 className="cta-section relative w-full overflow-hidden"
-                style={{ background: '#030e09', padding: 'clamp(100px, 14vw, 200px) clamp(20px, 5vw, 60px)', position: 'relative', zIndex: 10 }}
+                style={{ background: '#07111f', padding: 'clamp(100px, 14vw, 200px) clamp(20px, 5vw, 60px)', position: 'relative', zIndex: 10 }}
             >
-                <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0,255,136,0.09) 0%, rgba(0,255,136,0.03) 35%, transparent 70%)' }} aria-hidden="true" />
-                <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(0,255,136,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,136,0.025) 1px, transparent 1px)', backgroundSize: '60px 60px' }} aria-hidden="true" />
+                <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(248,250,252,0.08) 0%, rgba(148,163,184,0.03) 35%, transparent 70%)' }} aria-hidden="true" />
+                <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(248,250,252,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(248,250,252,0.025) 1px, transparent 1px)', backgroundSize: '60px 60px' }} aria-hidden="true" />
 
                 <motion.div
                     variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
                     className="cta-content max-w-4xl mx-auto flex flex-col items-center text-center gap-10 relative z-10"
                 >
                     <motion.div
-                        animate={{ scale: [1, 1.1, 1], boxShadow: ['0 0 40px rgba(0,255,136,0.3)', '0 0 90px rgba(0,255,136,0.6)', '0 0 40px rgba(0,255,136,0.3)'] }}
+                        animate={{ scale: [1, 1.1, 1], boxShadow: ['0 0 40px rgba(248,250,252,0.22)', '0 0 90px rgba(248,250,252,0.42)', '0 0 40px rgba(248,250,252,0.22)'] }}
                         transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-                        style={{ width: 80, height: 80, borderRadius: 24, background: 'linear-gradient(135deg, rgba(0,255,136,0.2), rgba(0,204,106,0.08))', border: '1.5px solid rgba(0,255,136,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                        style={{ width: 80, height: 80, borderRadius: 24, background: 'linear-gradient(135deg, rgba(248,250,252,0.18), rgba(148,163,184,0.08))', border: '1.5px solid rgba(248,250,252,0.36)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                     >
-                        <Brain size={36} style={{ color: '#00ff88' }} />
+                        <Brain size={36} className="brand-logo" />
                     </motion.div>
 
                     <div className="flex flex-col gap-5">
-                        <span className="font-overline" style={{ color: '#00ff88', fontSize: 10, letterSpacing: '0.26em' }}>Take Control Today</span>
+                        <span className="font-overline" style={{ color: '#f8fafc', fontSize: 10, letterSpacing: '0.26em' }}>Take Control Today</span>
                         <h2 className="font-display" style={{ fontSize: 'clamp(36px, 6vw, 80px)', fontWeight: 800, letterSpacing: '-0.03em', color: '#f0f0f0', lineHeight: 1.0 }}>
                             Take Control of Your{' '}
                             <span className="at-gradient-text">Mental Wellness.</span>
@@ -1242,7 +1242,7 @@ export default function Landing() {
 
                     <div className="flex items-center gap-4 flex-wrap justify-center">
                         <motion.button
-                            whileHover={{ scale: 1.04, boxShadow: '0 0 60px rgba(0,255,136,0.55), 0 16px 50px rgba(0,0,0,0.5)' }}
+                            whileHover={{ scale: 1.04, boxShadow: '0 0 60px rgba(248,250,252,0.38), 0 16px 50px rgba(0,0,0,0.5)' }}
                             whileTap={{ scale: 0.97 }}
                             onClick={() => nav('/register')}
                             className="at-btn-primary group flex items-center gap-3"
@@ -1265,7 +1265,7 @@ export default function Landing() {
                     <div className="flex items-center gap-8 flex-wrap justify-center" style={{ paddingTop: 20, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
                         {['100% Private', 'No payment required', 'Free Forever', 'Clinical-Grade AI'].map((item) => (
                             <div key={item} className="flex items-center gap-2">
-                                <CheckCircle2 size={13} style={{ color: '#00ff88', opacity: 0.7 }} />
+                                <CheckCircle2 size={13} style={{ color: '#f8fafc', opacity: 0.7 }} />
                                 <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>{item}</span>
                             </div>
                         ))}
@@ -1278,11 +1278,11 @@ export default function Landing() {
                 <div className="max-w-7xl mx-auto px-6 md:px-10">
                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 py-12" style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
                         <div className="flex items-center gap-3">
-                            <div style={{ width: 32, height: 32, borderRadius: 9, background: 'linear-gradient(135deg, rgba(0,255,136,0.22), rgba(0,204,106,0.08))', border: '1px solid rgba(0,255,136,0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <Brain size={16} style={{ color: '#00ff88' }} />
+                            <div style={{ width: 32, height: 32, borderRadius: 9, background: 'linear-gradient(135deg, rgba(248,250,252,0.18), rgba(148,163,184,0.08))', border: '1px solid rgba(248,250,252,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <Brain size={16} className="brand-logo" />
                             </div>
                             <div className="flex flex-col">
-                                <span className="font-display" style={{ fontSize: 14, fontWeight: 700, color: '#f0f0f0', letterSpacing: '0.04em' }}>MINDCARE AI</span>
+                                <span className="font-display" style={{ fontSize: 14, fontWeight: 700, color: '#f0f0f0', letterSpacing: '0.04em' }}>EMOTIX</span>
                                 <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Multimodal Mental Health System</span>
                             </div>
                         </div>
@@ -1297,13 +1297,13 @@ export default function Landing() {
                                     textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)',
                                     background: 'none', border: 'none', padding: '8px 16px', transition: 'color 0.25s',
                                 }}
-                                onMouseEnter={e => e.currentTarget.style.color = '#00ff88'}
+                                onMouseEnter={e => e.currentTarget.style.color = '#f8fafc'}
                                 onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
                             >
                                 Sign In
                             </motion.button>
                             <motion.button
-                                whileHover={{ scale: 1.03, boxShadow: '0 0 28px rgba(0,255,136,0.45)' }}
+                                whileHover={{ scale: 1.03, boxShadow: '0 0 28px rgba(248,250,252,0.3)' }}
                                 whileTap={{ scale: 0.97 }}
                                 onClick={() => nav('/register')}
                                 className="at-btn-primary"
@@ -1316,13 +1316,13 @@ export default function Landing() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-6">
                         <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.22)', letterSpacing: '0.03em' }}>
-                            © 2025 MindCare AI — Smart Mental Health Counselling System
+                            © 2026 Emotix — Smart Mental Health Counselling System
                         </span>
                         <div className="flex items-center gap-6">
                             {[
-                                { label: 'Privacy Policy', message: 'MindCare AI ensures 100% data privacy. Your session data is end-to-end encrypted and never stored permanently.' },
-                                { label: 'Terms of Use', message: 'By using MindCare AI, you agree to our terms. Please note: This is an AI support tool and not a substitute for clinical medical advice.' },
-                                { label: 'Contact', message: 'Need help? Reach out to our mental health support team at support@mindcareai.com' }
+                                { label: 'Privacy Policy', message: 'Emotix ensures 100% data privacy. Your session data is end-to-end encrypted and never stored permanently.' },
+                                { label: 'Terms of Use', message: 'By using Emotix, you agree to our terms. Please note: This is an AI support tool and not a substitute for clinical medical advice.' },
+                                { label: 'Contact', message: 'Need help? Reach out to our mental health support team at support@emotix.com' }
                             ].map(item => (
                                 <button key={item.label}
                                     onClick={() => setFooterModal({ isOpen: true, title: item.label, message: item.message })}
@@ -1357,10 +1357,10 @@ export default function Landing() {
                             initial={{ opacity: 0, scale: 0.95, y: 20 }} 
                             animate={{ opacity: 1, scale: 1, y: 0 }} 
                             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                            className="bg-[#0a1511] border border-emerald-500/20 rounded-3xl p-8 max-w-md w-full shadow-[0_40px_80px_rgba(0,0,0,0.6)] relative z-10 overflow-hidden"
+                            className="bg-[#0b1220] border border-white/15 rounded-3xl p-8 max-w-md w-full shadow-[0_40px_80px_rgba(0,0,0,0.6)] relative z-10 overflow-hidden"
                         >
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-cyan-400" />
-                            <div className="absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-white to-slate-500" />
+                            <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl pointer-events-none" />
                             
                             <h3 className="font-display text-2xl font-bold text-white mb-4 pr-8">{footerModal.title}</h3>
                             <p className="text-slate-300 text-sm leading-relaxed mb-8">{footerModal.message}</p>
@@ -1368,7 +1368,7 @@ export default function Landing() {
                             <div className="flex justify-end">
                                 <button 
                                     onClick={() => setFooterModal({ ...footerModal, isOpen: false })}
-                                    className="px-6 py-2.5 bg-white/5 hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/50 rounded-xl text-sm font-bold text-white transition-all"
+                                    className="px-6 py-2.5 bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/40 rounded-xl text-sm font-bold text-white transition-all"
                                 >
                                     Close
                                 </button>

@@ -10,7 +10,7 @@ const api = axios.create({
 // Request interceptor to attach JWT token
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem("mindcare_token") || localStorage.getItem("access_token");
+    const token = localStorage.getItem("emotix_token") || localStorage.getItem("access_token");
     if (token) {
       if (!config.headers) {
         config.headers = {};
@@ -34,8 +34,8 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      localStorage.removeItem("mindcare_token");
-      localStorage.removeItem("mindcare_user");
+      localStorage.removeItem("emotix_token");
+      localStorage.removeItem("emotix_user");
       window.location.href = "/login";
     }
     return Promise.reject(error);

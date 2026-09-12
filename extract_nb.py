@@ -1,7 +1,7 @@
 import json
 import codecs
 
-for nb in ['d:/MindCare-AI/Step4_VR.ipynb', 'd:/MindCare-AI/working.ipynb']:
+for nb in ['d:/EmotiX-main/EmotiX-main/Step4_VR.ipynb', 'd:/EmotiX-main/EmotiX-main/working.ipynb']:
     try:
         with codecs.open(nb, 'r', 'utf-8') as f:
             d = json.load(f)

@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 MindCare AI — Backend API
+# 🧠 Emotix — Backend API
 
 **A Smart Mental Health Counselling System powered by Multimodal AI**
 
@@ -18,7 +18,7 @@
 
 ## 📖 Description
 
-This is the **REST API backend** for the MindCare AI platform — a multimodal mental health counselling system that analyses a user's **facial emotion**, **voice mood**, **behavioural patterns**, and **natural language** to generate a personalised mental wellness assessment and AI-driven counselling experience.
+This is the **REST API backend** for the Emotix platform — a multimodal mental health counselling system that analyses a user's **facial emotion**, **voice mood**, **behavioural patterns**, and **natural language** to generate a personalised mental wellness assessment and AI-driven counselling experience.
 
 The backend is built with **FastAPI** and deployed as a Docker container on **Hugging Face Spaces**. It exposes endpoints for authentication, ML inference (face, voice, behaviour), real-time AI chat (via OpenRouter), session management, and dashboard analytics.
 
@@ -219,17 +219,17 @@ A `Dockerfile` is included for containerised deployment (used for Hugging Face S
 
 ```bash
 # Build the image
-docker build -t mindcare-backend .
+docker build -t emotix-backend .
 
 # Run the container (pass secrets as env vars)
 docker run -p 7860:7860 \
   -e OPENROUTER_API_KEY=sk-or-v1-xxx \
   -e SECRET_KEY=your_secret \
-  mindcare-backend
+  emotix-backend
 ```
 
 ---
 
 ## 📄 License
 
-This project is developed as part of an academic research initiative. All rights reserved © 2025 MindCare AI.
+This project is developed as part of an academic research initiative. All rights reserved © 2025 Emotix.

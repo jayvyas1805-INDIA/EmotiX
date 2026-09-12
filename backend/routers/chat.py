@@ -131,7 +131,7 @@ async def _send_message_internal(req: SendMessageRequest, user_id: int, db: Sess
                 next_stage_prompt = "How long have you been feeling this?"
         else:
             if not history_list:
-                next_stage_prompt = f"Hi {user_name}! 👋 I'm your MindCare AI counsellor. I'm here to listen. What's been on your mind lately?"
+                next_stage_prompt = f"Hi {user_name}! 👋 I'm your Emotix counsellor. I'm here to listen. What's been on your mind lately?"
             else:
                 next_stage_prompt = "Could you tell me a bit more about the main problem you're dealing with right now?"
             

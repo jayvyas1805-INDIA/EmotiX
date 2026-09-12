@@ -5,8 +5,8 @@ import sklearn.preprocessing
 sys.modules['LabelEncoder'] = sklearn.preprocessing # Fix for weird pickle error
 from sklearn.preprocessing import LabelEncoder
 
-encoder_path = r"d:\MindCare-AI\backend\Pre-trained_Models\Step1_Behaviour\Model_Encoders.pkl"
-model_path = r"d:\MindCare-AI\backend\Pre-trained_Models\Step1_Behaviour\Best_Mental_Behaviour_Model.pkl"
+encoder_path = r"d:\EmotiX-main\EmotiX-main\backend\Pre-trained_Models\Step1_Behaviour\Model_Encoders.pkl"
+model_path = r"d:\EmotiX-main\EmotiX-main\backend\Pre-trained_Models\Step1_Behaviour\Best_Mental_Behaviour_Model.pkl"
 
 print("--- Encoders ---")
 with open(encoder_path, "rb") as f:

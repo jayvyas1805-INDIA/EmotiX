@@ -259,7 +259,7 @@ export default function FaceEmotion() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.8, ease: "easeInOut" }}
                         className="fixed inset-0 z-[9999] flex items-center justify-center pointer-events-none"
-                        style={{ background: '#04100c' }}
+                        style={{ background: '#07111f' }}
                     >
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
@@ -269,10 +269,10 @@ export default function FaceEmotion() {
                         >
                             <div className="flex items-center justify-center gap-4 mb-2">
                                 <motion.div animate={{ boxShadow: ['0 0 24px rgba(0,255,136,0.25)', '0 0 64px rgba(0,255,136,0.65)', '0 0 24px rgba(0,255,136,0.25)'] }} transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: 52, height: 52, borderRadius: 14, background: 'linear-gradient(135deg, rgba(0,255,136,0.22) 0%, rgba(0,204,106,0.07) 100%)', border: '1.5px solid rgba(0,255,136,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                    <Brain size={26} style={{ color: '#00ff88' }} />
+                                    <Brain size={26} className="brand-logo" />
                                 </motion.div>
                                 <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '32px', fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase', background: 'linear-gradient(170deg, #ffffff 10%, #d1fae5 55%, #6ee7b7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>
-                                    MINDCARE AI
+                                    EMOTIX
                                 </span>
                             </div>
                             <div className="w-48 h-1 rounded-full overflow-hidden mt-2" style={{ background: 'rgba(255,255,255,0.1)' }}>
@@ -281,7 +281,7 @@ export default function FaceEmotion() {
                                     animate={{ width: "100%" }}
                                     transition={{ duration: 1.4, ease: "easeInOut" }}
                                     className="h-full"
-                                    style={{ background: '#00ff88' }}
+                                    style={{ background: '#f8fafc' }}
                                 />
                             </div>
                         </motion.div>
@@ -324,7 +324,7 @@ export default function FaceEmotion() {
                             onClick={() => nav('/chat')}
                             className="flex items-center gap-2 text-slate-400 transition-colors text-xs font-bold uppercase tracking-widest w-fit group"
                             style={{ transition: 'color 0.3s ease' }}
-                            onMouseEnter={e => e.currentTarget.style.color = '#00ff88'}
+                            onMouseEnter={e => e.currentTarget.style.color = '#f8fafc'}
                             onMouseLeave={e => e.currentTarget.style.color = 'rgb(148, 163, 184)'}
                         >
                             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
@@ -333,10 +333,10 @@ export default function FaceEmotion() {
                         {/* Premium Branded Header - SCALED UP */}
                         <div className="flex items-center justify-center gap-6 mb-6 mt-4 print:hidden">
                             <motion.div animate={{ boxShadow: ['0 0 30px rgba(0,255,136,0.3)', '0 0 80px rgba(0,255,136,0.7)', '0 0 30px rgba(0,255,136,0.3)'] }} transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: 72, height: 72, borderRadius: 20, background: 'linear-gradient(135deg, rgba(0,255,136,0.22) 0%, rgba(0,204,106,0.07) 100%)', border: '2px solid rgba(0,255,136,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                <Brain size={38} style={{ color: '#00ff88' }} />
+                                <Brain size={38} className="brand-logo" />
                             </motion.div>
                             <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '52px', fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase', background: 'linear-gradient(170deg, #ffffff 10%, #d1fae5 55%, #6ee7b7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>
-                                MINDCARE AI
+                                EMOTIX
                             </span>
                         </div>
                         <div className="w-full flex justify-center">
@@ -352,7 +352,7 @@ export default function FaceEmotion() {
                                 fontWeight: 900,
                                 lineHeight: 0.95,
                                 letterSpacing: '-0.03em',
-                                background: 'linear-gradient(120deg, #00ff88 0%, #00cc6a 40%, #ffffff 70%, #00ff88 100%)',
+                                background: 'linear-gradient(120deg, #ffffff 0%, #cbd5e1 40%, #ffffff 70%, #f8fafc 100%)',
                                 backgroundSize: '250% auto',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
@@ -381,7 +381,7 @@ export default function FaceEmotion() {
                                                     <Camera size={52} className="text-slate-500" />
                                                     <button onClick={requestCamera}
                                                         className="px-8 py-3 rounded-xl transition-all"
-                                                        style={{ background: 'linear-gradient(135deg, #00ff88, #00cc6a)', color: '#000000', fontWeight: 800, boxShadow: '0 8px 25px rgba(0,255,136,0.3)' }}
+                                                        style={{ background: 'linear-gradient(135deg, #ffffff, #64748b)', color: '#000000', fontWeight: 800, boxShadow: '0 8px 25px rgba(248,250,252,0.24)' }}
                                                         onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 12px 35px rgba(0,255,136,0.4)'; e.currentTarget.style.transform = 'translateY(-2px)' }}
                                                         onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,255,136,0.3)'; e.currentTarget.style.transform = 'translateY(0)' }}
                                                     >
@@ -589,7 +589,7 @@ export default function FaceEmotion() {
                                                             <motion.button onClick={startRecording}
                                                                 disabled={!modelsLoaded}
                                                                 className={`px-8 py-3.5 flex items-center gap-2 rounded-xl transition-all w-full sm:w-auto justify-center ${!modelsLoaded ? 'opacity-50 cursor-not-allowed' : ''}`}
-                                                                style={{ background: 'linear-gradient(135deg, #00ff88, #00cc6a)', color: '#000000', fontWeight: 800, boxShadow: '0 8px 25px rgba(0,255,136,0.3)' }}
+                                                                style={{ background: 'linear-gradient(135deg, #ffffff, #64748b)', color: '#000000', fontWeight: 800, boxShadow: '0 8px 25px rgba(248,250,252,0.24)' }}
                                                                 whileHover={modelsLoaded ? { scale: 1.02, boxShadow: '0 12px 35px rgba(0,255,136,0.4)' } : {}}
                                                             >
                                                                 <Camera size={18} /> Start 20-sec Recording
@@ -621,7 +621,7 @@ export default function FaceEmotion() {
                                                                 </button>
                                                                 <motion.button onClick={uploadAndAnalyze} disabled={loading}
                                                                     className="px-6 py-3 rounded-xl flex items-center justify-center gap-2 transition-all sm:flex-[1.5] max-w-[250px]"
-                                                                    style={{ background: 'linear-gradient(135deg, #00ff88, #00cc6a)', color: '#000000', fontWeight: 800, boxShadow: '0 8px 25px rgba(0,255,136,0.3)' }}
+                                                                    style={{ background: 'linear-gradient(135deg, #ffffff, #64748b)', color: '#000000', fontWeight: 800, boxShadow: '0 8px 25px rgba(248,250,252,0.24)' }}
                                                                     whileHover={{ scale: 1.02, boxShadow: '0 12px 35px rgba(0,255,136,0.4)' }}>
                                                                     {loading
                                                                         ? <><div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />Analyzing...</>

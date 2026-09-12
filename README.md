@@ -31,7 +31,7 @@
 https://github.com/user-attachments/assets/af17f69e-6d1a-4be5-aa71-79579b7e0fb5
 
 <!-- <div align="center">
-  <em>▶ MINDCARE-AI - Complete Project Walkthrough (Click Play to watch)</em>
+<em>▶ EMOTIX - Complete Project Walkthrough (Click Play to watch)</em>
 </div> -->
 
 ---
@@ -73,7 +73,7 @@ The results are fused into a **Final Severity Score** (0–100) and a **Risk Lev
 
 The project is fully deployed and accessible online. You can test the multimodal AI features without installing anything locally.
 
-<!-- - **Frontend Application (Vercel):** [MindCare AI Web App](https://smart-mental-health-counselling-sys.vercel.app)
+<!-- - **Frontend Application (Vercel):** [Emotix Web App](https://smart-mental-health-counselling-sys.vercel.app)
 - **Backend API & Docs (Hugging Face):** [FastAPI Swagger UI](https://hashmil-muahmmed08-mindcare-backend.hf.space/docs) -->
 
 *(Note: The backend is hosted on a free Hugging Face Space and may take 1-2 minutes to wake up from sleep upon initial load. The OTP email service is currently in DEMO mode; OTPs are generated and can be viewed in the backend logs or network response).*
@@ -98,7 +98,7 @@ The project is fully deployed and accessible online. You can test the multimodal
 - **Risk Level Indicator** — Color-coded badge (🟢 Low / 🟡 Moderate / 🟠 High / 🔴 Critical)
 - **Historical Trends** — Area chart showing severity score evolution over time
 - **Modality Score Breakdown** — Individual scores for each of the four AI channels
-- **Dr. MindCare Chatbot** — An empathetic AI therapist powered by OpenRouter
+- **Dr. Emotix Chatbot** — An empathetic AI therapist powered by OpenRouter
 - **Daily Wellness Tasks** — Personalized, severity-adaptive task checklist
 - **Mindfulness Breathing Exercises** — Interactive guided breathing animations
 - **YouTube Video Recommendations** — Curated mental health content based on risk profile
@@ -131,7 +131,7 @@ The project is fully deployed and accessible online. You can test the multimodal
 │  Landing → Login/Register → Assessment Pipeline → Dashboard         │
 │      │           │               │                    │             │
 │  React.js    Google OAuth    4 Modality Pages    Recharts / FM      │
-│  WebGL BG    JWT Tokens      (Behaviour, Chat,   Dr. MindCare Bot   │
+│  WebGL BG    JWT Tokens      (Behaviour, Chat,   Dr. Emotix Bot     │
 │                               Face, Voice)       Daily Tasks        │
 └───────────────────────────┬─────────────────────────────────────────┘
                             │  HTTP / REST (Axios)
@@ -269,7 +269,7 @@ User Registers/Logs In
 ## 📁 Project Structure
 
 ```
-MindCare-AI/
+ EmotiX/
 │
 ├── backend/                        # FastAPI Python Backend
 │   ├── main.py                     # App entry point, CORS, lifespan
@@ -289,7 +289,7 @@ MindCare-AI/
 │   │   ├── face.py                 # Facial emotion video upload & inference
 │   │   ├── voice.py                # Voice audio upload & inference
 │   │   ├── severity.py             # Final severity fusion & report
-│   │   └── dashboard.py            # Dashboard data, tasks, Dr. MindCare chat
+│   │   └── dashboard.py            # Dashboard data, tasks, Dr. Emotix chat
 │   ├── Pre-trained_Models/         # ← Place downloaded models here
 │   │   ├── Step1_Behaviour/
 │   │   │   ├── Best_Mental_Behaviour_Model.pkl
@@ -348,7 +348,7 @@ MindCare-AI/
 
 Due to GitHub's file size limits, the large pre-trained multimodal models and the training datasets/scripts are hosted externally on Google Drive. To fully run or explore this project, please download the resource file below:
 
-📥 **[Download MindCare Resources (Models & Training Data)](https://drive.google.com/file/d/1DdFOl4IC7EVLnwpmbJZWrMve3frvxyzX/view?usp=sharing)**
+📥 **[Download Emotix Resources (Models & Training Data)](https://drive.google.com/file/d/1DdFOl4IC7EVLnwpmbJZWrMve3frvxyzX/view?usp=sharing)**
 
 ### How to Setup the Downloaded Resources:
 Once you download and extract `MindCare_Resources.zip`, you will find two folders inside. Please place them as instructed below:
@@ -483,7 +483,7 @@ The FastAPI backend automatically generates interactive documentation. Once the 
 | `GET` | `/dashboard/summary` | Full dashboard data payload | ✅ |
 | `GET` | `/dashboard/tasks` | Get daily wellness tasks | ✅ |
 | `POST` | `/dashboard/tasks/complete` | Mark a task as completed | ✅ |
-| `POST` | `/dashboard/doctor-chat` | Chat with Dr. MindCare bot | ✅ |
+| `POST` | `/dashboard/doctor-chat` | Chat with Dr. Emotix bot | ✅ |
 | `GET` | `/health` | Backend & model health check | ❌ |
 
 > ✅ = Requires `Authorization: Bearer <token>` header
@@ -506,7 +506,7 @@ The SQLite database (`mindcare.db`) is managed by SQLAlchemy and contains the fo
 | `emergency_events` | High-severity / crisis trigger event log |
 | `suggestions` | Personalized recommendations stored per severity level |
 | `daily_tasks` | Daily wellness task list with completion tracking |
-| `doctor_chat_messages` | Dr. MindCare AI therapist conversation history |
+| `doctor_chat_messages` | Dr. Emotix therapist conversation history |
 | `password_reset_otps` | Time-limited OTP records for password reset flow |
 
 ---
@@ -524,11 +524,11 @@ The SQLite database (`mindcare.db`) is managed by SQLAlchemy and contains the fo
 | **Facial Emotion** | `/face` | Live webcam capture → ResNet emotion analysis |
 | **Voice Analysis** | `/voice` | Microphone recording → CNN emotion analysis |
 | **Final Severity** | `/severity` | Fused multimodal report with risk level |
-| **Dashboard** | `/dashboard` | Main wellness hub with charts, tasks, Dr. MindCare, and video recommendations |
+| **Dashboard** | `/dashboard` | Main wellness hub with charts, tasks, Dr. Emotix, and video recommendations |
 
 ---
 
-Here is a glimpse of the MindCare AI platform in action:
+Here is a glimpse of the Emotix platform in action:
 
 | Landing Page |
 | :---: |
@@ -589,6 +589,6 @@ Please ensure your code follows the existing project structure and styling conve
 
 **Built with ❤️ for better mental wellness**
 
-*MindCare AI — Because your mind matters.*
+*Emotix — Because your mind matters.*
 
 </div>

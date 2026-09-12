@@ -77,14 +77,14 @@ export default function ChatCounselling() {
             } else {
                 setMessages([{
                     id: 1, sender: 'bot',
-                    message: `Hi ${user?.full_name || 'there'}! 👋 I'm your MindCare AI counsellor.\n\nI'm here to listen and help you. **What is your problem?**`,
+                    message: `Hi ${user?.full_name || 'there'}! 👋 I'm your Emotix counsellor.\n\nI'm here to listen and help you. **What is your problem?**`,
                     timestamp: new Date().toISOString()
                 }])
             }
         }).catch(() => {
             setMessages([{
                 id: 1, sender: 'bot',
-                message: `Hi ${user?.full_name}! 👋 I'm your MindCare AI counsellor. I'm here to listen and help you. What is your problem?`,
+                message: `Hi ${user?.full_name}! 👋 I'm your Emotix counsellor. I'm here to listen and help you. What is your problem?`,
                 timestamp: new Date().toISOString()
             }])
         })
@@ -117,7 +117,7 @@ export default function ChatCounselling() {
         let botMsgId = null;
         try {
             const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
-            const token = localStorage.getItem("mindcare_token") || localStorage.getItem("access_token");
+            const token = localStorage.getItem("emotix_token") || localStorage.getItem("access_token");
 
             const response = await fetch(`${API_URL}/api/chat`, {
                 method: 'POST',
@@ -132,8 +132,8 @@ export default function ChatCounselling() {
             if (!response.ok) {
                 const is401 = response.status === 401;
                 if (is401) {
-                    localStorage.removeItem("mindcare_token");
-                    localStorage.removeItem("mindcare_user");
+                    localStorage.removeItem("emotix_token");
+                    localStorage.removeItem("emotix_user");
                     window.location.href = "/login";
                 }
                 throw new Error("HTTP Error " + response.status);
@@ -331,7 +331,7 @@ export default function ChatCounselling() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.8, ease: "easeInOut" }}
                         className="fixed inset-0 z-[9999] flex items-center justify-center pointer-events-none"
-                        style={{ background: '#04100c' }}
+                        style={{ background: '#07111f' }}
                     >
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
@@ -341,10 +341,10 @@ export default function ChatCounselling() {
                         >
                             <div className="flex items-center justify-center gap-4 mb-2">
                                 <motion.div animate={{ boxShadow: ['0 0 24px rgba(0,255,136,0.25)', '0 0 64px rgba(0,255,136,0.65)', '0 0 24px rgba(0,255,136,0.25)'] }} transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: 52, height: 52, borderRadius: 14, background: 'linear-gradient(135deg, rgba(0,255,136,0.22) 0%, rgba(0,204,106,0.07) 100%)', border: '1.5px solid rgba(0,255,136,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                    <Brain size={26} style={{ color: '#00ff88' }} />
+                                    <Brain size={26} className="brand-logo" />
                                 </motion.div>
                                 <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '32px', fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase', background: 'linear-gradient(170deg, #ffffff 10%, #d1fae5 55%, #6ee7b7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>
-                                    MINDCARE AI
+                                    EMOTIX
                                 </span>
                             </div>
                             <div className="w-48 h-1 rounded-full overflow-hidden mt-2" style={{ background: 'rgba(255,255,255,0.1)' }}>
@@ -353,7 +353,7 @@ export default function ChatCounselling() {
                                     animate={{ width: "100%" }}
                                     transition={{ duration: 1.4, ease: "easeInOut" }}
                                     className="h-full"
-                                    style={{ background: '#00ff88' }}
+                                    style={{ background: '#f8fafc' }}
                                 />
                             </div>
                         </motion.div>
@@ -362,7 +362,7 @@ export default function ChatCounselling() {
             </AnimatePresence>
 
             {/* The root wrapper using exact inline styles from Landing */}
-            <div className="relative flex flex-col items-center justify-center py-16 px-4 overflow-hidden" style={{ minHeight: '100vh', fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif", background: '#04100c' }}>
+            <div className="relative flex flex-col items-center justify-center py-16 px-4 overflow-hidden" style={{ minHeight: '100vh', fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif", background: '#07111f' }}>
                 {/* The Root Background */}
                 <div className="absolute inset-0 z-0 pointer-events-none print:hidden">
                     <div
@@ -387,7 +387,7 @@ export default function ChatCounselling() {
                             onClick={() => nav('/behaviour')}
                             className="flex items-center gap-2 text-slate-400 transition-colors text-xs font-bold uppercase tracking-widest w-fit group"
                             style={{ transition: 'color 0.3s ease' }}
-                            onMouseEnter={e => e.currentTarget.style.color = '#00ff88'}
+                            onMouseEnter={e => e.currentTarget.style.color = '#f8fafc'}
                             onMouseLeave={e => e.currentTarget.style.color = 'rgb(148, 163, 184)'}
                         >
                             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
@@ -396,10 +396,10 @@ export default function ChatCounselling() {
                         {/* Premium Branded Header - SCALED UP */}
                         <div className="flex items-center justify-center gap-6 mb-6 mt-4 print:hidden">
                             <motion.div animate={{ boxShadow: ['0 0 30px rgba(0,255,136,0.3)', '0 0 80px rgba(0,255,136,0.7)', '0 0 30px rgba(0,255,136,0.3)'] }} transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: 72, height: 72, borderRadius: 20, background: 'linear-gradient(135deg, rgba(0,255,136,0.22) 0%, rgba(0,204,106,0.07) 100%)', border: '2px solid rgba(0,255,136,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                <Brain size={38} style={{ color: '#00ff88' }} />
+                                <Brain size={38} className="brand-logo" />
                             </motion.div>
                             <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '52px', fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase', background: 'linear-gradient(170deg, #ffffff 10%, #d1fae5 55%, #6ee7b7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>
-                                MINDCARE AI
+                                EMOTIX
                             </span>
                         </div>
                         <div className="w-full flex justify-center">
@@ -415,7 +415,7 @@ export default function ChatCounselling() {
                                 fontWeight: 900,
                                 lineHeight: 0.95,
                                 letterSpacing: '-0.03em',
-                                background: 'linear-gradient(120deg, #00ff88 0%, #00cc6a 40%, #ffffff 70%, #00ff88 100%)',
+                                background: 'linear-gradient(120deg, #ffffff 0%, #cbd5e1 40%, #ffffff 70%, #f8fafc 100%)',
                                 backgroundSize: '250% auto',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
@@ -437,7 +437,7 @@ export default function ChatCounselling() {
                             <div className="flex flex-col">
                                 <h3 className="leading-tight flex items-center gap-2 text-lg" style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, color: '#f0f0f0' }}>
                                     AI Counsellor
-                                    <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#00ff88', boxShadow: '0 0 10px rgba(0,255,136,0.8)' }} className="animate-pulse" />
+                                    <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#f8fafc', boxShadow: '0 0 10px rgba(248,250,252,0.7)' }} className="animate-pulse" />
                                 </h3>
                             </div>
                             <div className="flex items-center gap-2">
@@ -505,7 +505,7 @@ export default function ChatCounselling() {
                                         <div
                                             className="relative group transition-all duration-300"
                                             style={msg.sender === 'user'
-                                                ? { background: 'linear-gradient(135deg, #00ff88, #00cc6a)', color: '#000000', borderRadius: '16px 0 16px 16px', padding: '16px 20px', fontSize: '15px', fontWeight: 500, boxShadow: '0 4px 20px rgba(0,255,136,0.15)' }
+                                                ? { background: 'linear-gradient(135deg, #ffffff, #64748b)', color: '#000000', borderRadius: '16px 0 16px 16px', padding: '16px 20px', fontSize: '15px', fontWeight: 500, boxShadow: '0 4px 20px rgba(248,250,252,0.14)' }
                                                 : { background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '0 16px 16px 16px', color: 'rgba(240,240,240,0.9)', padding: '16px 20px', fontSize: '15px', lineHeight: 1.6, fontWeight: 400 }
                                             }
                                         >

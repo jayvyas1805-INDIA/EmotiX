@@ -1,10 +1,10 @@
 @echo off
-title MindCare AI - Frontend
+title EmotiX - Frontend
 color 0B
 
 echo.
 echo ============================================
-echo    MindCare AI - Frontend (React + Vite)
+echo    EmotiX - Frontend (React + Vite)
 echo ============================================
 echo.
 

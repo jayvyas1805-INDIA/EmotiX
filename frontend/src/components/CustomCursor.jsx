@@ -121,7 +121,7 @@ export default function CustomCursor() {
                         top: 0, left: 0,
                         width: 6, height: 6,
                         borderRadius: '50%',
-                        background: '#00ff88',
+                        background: '#f8fafc',
                         pointerEvents: 'none',
                         zIndex: 9997,
                         willChange: 'transform',
@@ -170,7 +170,7 @@ export default function CustomCursor() {
                             position: 'absolute', inset: 0,
                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                             fontSize: 8, fontWeight: 700, letterSpacing: '0.1em',
-                            color: '#00ff88', textTransform: 'uppercase', userSelect: 'none',
+                            color: '#f8fafc', textTransform: 'uppercase', userSelect: 'none',
                             fontFamily: 'Inter, system-ui, sans-serif',
                         }}
                     >
@@ -196,7 +196,7 @@ export default function CustomCursor() {
                     position: 'fixed', top: 0, left: 0,
                     borderRadius: '50%',
                     pointerEvents: 'none', zIndex: 9999,
-                    background: '#00ff88',
+                            background: '#f8fafc',
                 }}
                 animate={{
                     width: isView ? 0 : clicked ? 8 : isHover ? 5 : 4,

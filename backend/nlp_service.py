@@ -231,7 +231,7 @@ def detect_meta_query(text: str) -> Optional[str]:
     
     # Existing Identity
     if any(kw in text_lower for kw in ["your name", "who are you", "what are you"]):
-        return "I'm MindCare AI, your supportive and empathetic mental health companion. 👋"
+        return "I'm Emotix, your supportive and empathetic mental health companion. 👋"
     if any(kw in text_lower for kw in ["your purpose", "what do you do", "why are you here"]):
         return "My purpose is to listen, provide emotional support, and help you navigate through your thoughts in a safe space."
     if any(kw in text_lower for kw in ["do next", "what should i do", "what's next"]):
@@ -239,7 +239,7 @@ def detect_meta_query(text: str) -> Optional[str]:
         
     # Meta questions about AI function
     if any(kw in text_lower for kw in ["who created", "who made", "developer"]):
-        return "I was created by the MindCare team to serve as an intelligent, memory-aware mental health assistant."
+        return "I was created by the Emotix team to serve as an intelligent, memory-aware mental health assistant."
     if any(kw in text_lower for kw in ["are you ai", "are you human", "are you a human", "are you an ai", "are you a robot"]):
         return "I am an AI mental health assistant, not a human. I'm here to listen and help structure your thoughts, but I cannot replace professional medical help."
     if any(kw in text_lower for kw in ["are you a therapist", "are you a doctor"]):

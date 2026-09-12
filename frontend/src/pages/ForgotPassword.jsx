@@ -72,7 +72,7 @@ export default function ForgotPassword() {
     }
 
     return (
-        <div className="relative min-h-screen bg-[#05110d] overflow-hidden font-sans flex items-center justify-center p-4">
+        <div className="relative min-h-screen bg-[#07111f] overflow-hidden font-sans flex items-center justify-center p-4">
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 100%, rgba(8,8,8,0.9) 0%, transparent 70%), radial-gradient(ellipse 60% 50% at 0% 50%, rgba(8,8,8,0.5) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 100% 20%, rgba(0,255,136,0.04) 0%, transparent 60%)' }} />
             </div>
@@ -82,10 +82,10 @@ export default function ForgotPassword() {
                 <div className="text-center mb-8 flex flex-col items-center">
                     <div className="flex items-center justify-center gap-4 mb-6">
                         <motion.div animate={{ boxShadow: ['0 0 24px rgba(0,255,136,0.25)', '0 0 64px rgba(0,255,136,0.65)', '0 0 24px rgba(0,255,136,0.25)'] }} transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: 52, height: 52, borderRadius: 14, background: 'linear-gradient(135deg, rgba(0,255,136,0.22) 0%, rgba(0,204,106,0.07) 100%)', border: '1.5px solid rgba(0,255,136,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                            <Brain size={26} style={{ color: '#00ff88' }} />
+                            <Brain size={26} className="brand-logo" />
                         </motion.div>
                         <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '32px', fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase', background: 'linear-gradient(170deg, #ffffff 10%, #d1fae5 55%, #6ee7b7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>
-                            MINDCARE AI
+                            EMOTIX
                         </span>
                     </div>
                     <h1 className="font-display text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400 font-extrabold text-3xl tracking-tight mb-2">

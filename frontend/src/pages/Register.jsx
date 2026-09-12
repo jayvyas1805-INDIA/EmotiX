@@ -99,7 +99,7 @@ export default function Register() {
     }
 
     return (
-        <div className="relative min-h-screen bg-[#05110d] overflow-hidden font-sans flex items-center justify-center p-4 py-12 md:py-20">
+        <div className="relative min-h-screen bg-[#07111f] overflow-hidden font-sans flex items-center justify-center p-4 py-12 md:py-20">
             {/* Background Animations to match Landing.jsx */}
             <div className="fixed inset-0 z-0 pointer-events-none">
                 <div
@@ -132,13 +132,13 @@ export default function Register() {
                         animate={{ y: [0, -8, 0] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                     >
-                        <Brain size={32} className="text-[#00ff88]" />
+                        <Brain size={32} className="brand-logo" />
                     </motion.div>
                     <h1 className="font-display text-slate-100 font-extrabold text-3xl tracking-tight mb-2">
                         Create Account
                     </h1>
                     <p className="font-sans font-light text-slate-400 text-sm tracking-wide">
-                        Join MindCare AI for personalized wellness support
+                        Join Emotix for personalized wellness support
                     </p>
                 </div>
 
@@ -189,9 +189,9 @@ export default function Register() {
                                             <div className="relative group">
                                                 <select className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 pr-10 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all font-sans appearance-none cursor-pointer" value={form.gender}
                                                     onChange={e => update('gender', e.target.value)}>
-                                                    <option className="bg-[#05110d] text-white">Male</option>
-                                                    <option className="bg-[#05110d] text-white">Female</option>
-                                                    <option className="bg-[#05110d] text-white">Other</option>
+                                                    <option className="bg-[#0b1220] text-white">Male</option>
+                                                    <option className="bg-[#0b1220] text-white">Female</option>
+                                                    <option className="bg-[#0b1220] text-white">Other</option>
                                                 </select>
                                                 <ChevronRight size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none rotate-90" />
                                             </div>
@@ -203,7 +203,7 @@ export default function Register() {
                                         <div className="relative group">
                                             <select className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 pr-10 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all font-sans appearance-none cursor-pointer" value={form.occupation}
                                                 onChange={e => update('occupation', e.target.value)}>
-                                                {OCCUPATIONS.map(o => <option key={o} className="bg-[#05110d] text-white">{o}</option>)}
+                                                {OCCUPATIONS.map(o => <option key={o} className="bg-[#0b1220] text-white">{o}</option>)}
                                             </select>
                                             <ChevronRight size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none rotate-90" />
                                         </div>

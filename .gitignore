@@ -1,5 +1,5 @@
 # =============================================
-# MindCare AI - Root .gitignore
+# Emotix - Root .gitignore
 # =============================================
 
 # --- Large ML Model Files (exceed GitHub 100MB limit - store via Git LFS or cloud) ---

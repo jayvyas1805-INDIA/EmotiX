@@ -67,7 +67,7 @@ export default function Login() {
     }
 
     return (
-        <div className="relative min-h-screen bg-[#05110d] overflow-hidden font-sans flex items-center justify-center p-4">
+        <div className="relative min-h-screen bg-[#07111f] overflow-hidden font-sans flex items-center justify-center p-4">
             {/* Background Animations to match Landing.jsx */}
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div
@@ -110,7 +110,7 @@ export default function Login() {
                                 flexShrink: 0,
                             }}
                         >
-                            <Brain size={26} style={{ color: '#00ff88' }} />
+                            <Brain size={26} className="brand-logo" />
                         </motion.div>
 
                         {/* Stylized Brand Text */}
@@ -126,14 +126,14 @@ export default function Login() {
                             backgroundClip: 'text',
                             display: 'inline-block'
                         }}>
-                            MINDCARE AI
+                            EmotiX
                         </span>
                     </div>
                     <h1 className="font-display text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400 font-extrabold text-3xl tracking-tight mb-2">
                         Welcome Back
                     </h1>
                     <p className="font-sans font-light text-slate-500 text-sm tracking-wide">
-                        Secure access to your MindCare AI dashboard.
+                        Secure access to your EmotiX dashboard.
                     </p>
                 </div>
 

@@ -1,13 +1,13 @@
 # PROJECT DOCUMENTATION
 ## Smart Mental Health Counselling System Using Multimodal AI
 
-This document provides a comprehensive, end-to-end architectural and technical analysis of the MindCare AI platform. It covers the frontend React architecture, backend FastAPI structure, and the integration of multimodal machine learning models for holistic mental wellness assessment.
+This document provides a comprehensive, end-to-end architectural and technical analysis of the Emotix platform. It covers the frontend React architecture, backend FastAPI structure, and the integration of multimodal machine learning models for holistic mental wellness assessment.
 
 ---
 
 ## 1. Executive Summary
 
-MindCare AI is a Next-Generation Multimodal Mental Health System. It aggregates data from four distinct modalities—Behavioural Profiling, AI Chat Counselling, Facial Emotion Recognition, and Voice Stress Analysis—to generate a unified severity score map of a user's emotional state. The project emphasizes advanced UI/UX (Active Theory design elements like glassmorphism and smooth animations) coupled with robust, real-time backend ML inference.
+Emotix is a Next-Generation Multimodal Mental Health System. It aggregates data from four distinct modalities—Behavioural Profiling, AI Chat Counselling, Facial Emotion Recognition, and Voice Stress Analysis—to generate a unified severity score map of a user's emotional state. The project emphasizes advanced UI/UX (Active Theory design elements like glassmorphism and smooth animations) coupled with robust, real-time backend ML inference.
 
 ---
 
@@ -38,7 +38,7 @@ The assessment strictly follows a sequential multimodal pipeline, aggregating cl
 - **ML Processing:** The backend routes this to a Scikit-Learn based pre-trained model (accessed via `ml_loader.predict_behaviour`), mapping outputs to Low/Medium/High risk categories and extracting a baseline severity score (1-10 scale).
 
 ### 3.2 AI Chat Counselling (`ChatCounselling.jsx`)
-- **Functionality:** A natural, conversational interface using an empathetic AI Persona ("MindCare AI").
+- **Functionality:** A natural, conversational interface using an empathetic AI Persona ("Emotix").
 - **Backend Sync:** Streams messages using Server-Sent Events (SSE) via `POST /api/chat`.
 - **AI Processing:** 
   - Iteratively builds a psychological profile using a sliding context window. 
@@ -70,7 +70,7 @@ The assessment strictly follows a sequential multimodal pipeline, aggregating cl
 - **Features:** 
   - **Historical Trends:** Line/Area charts showing severity drops/spikes over time.
   - **Daily Habits:** A gamified tracker integrated with `POST /toggle-task`.
-  - **Dr. MindCare Bot:** A secondary fallback conversational agent strictly for post-assessment daily check-ins.
+  - **Dr. Emotix Bot:** A secondary fallback conversational agent strictly for post-assessment daily check-ins.
 - **AI Driven Smart Suggestions:** Fetches personalized quotes, breathing exercises, and lifestyle tips dependent heavily on their immediate final severity bracket via `GET /smart-suggestions`.
 
 ---

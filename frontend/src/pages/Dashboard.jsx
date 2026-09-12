@@ -35,7 +35,7 @@ export default function Dashboard() {
 
     // Chatbot State
     const [chatMessages, setChatMessages] = useState([
-        { role: 'assistant', text: "Hello! I am Dr. MindCare. How are you feeling today?" }
+        { role: 'assistant', text: "Hello! I am Dr. Emotix. How are you feeling today?" }
     ])
     const [chatInput, setChatInput] = useState('')
     const [chatLoading, setChatLoading] = useState(false)
@@ -99,8 +99,8 @@ export default function Dashboard() {
     }
 
     const handleLogout = () => {
-        localStorage.removeItem('mindcare_token')
-        localStorage.removeItem('mindcare_user')
+        localStorage.removeItem('emotix_token')
+        localStorage.removeItem('emotix_user')
         window.location.href = '/login'
     }
 
@@ -153,7 +153,7 @@ export default function Dashboard() {
 
     if (loading) {
         return (
-            <div className="fixed inset-0 z-[9999] bg-[#04100c] flex flex-col items-center justify-center">
+            <div className="fixed inset-0 z-[9999] bg-[#07111f] flex flex-col items-center justify-center">
                 <div className="relative flex items-center justify-center w-20 h-20 rounded-2xl bg-emerald-900/20 border border-emerald-500/30 mb-6 shadow-[0_0_40px_rgba(0,255,136,0.2)]">
                     <Loader2 size={32} className="text-emerald-400 animate-spin z-10" />
                 </div>
@@ -212,7 +212,7 @@ export default function Dashboard() {
                 initial={showPreloader ? { opacity: 1 } : false}
                 animate={{ opacity: showPreloader ? 1 : 0 }}
                 transition={{ duration: 0.8, ease: "easeInOut" }}
-                className={`fixed inset-0 z-[9999] bg-[#04100c] flex items-center justify-center pointer-events-none ${!showPreloader ? 'pointer-events-none opacity-0' : ''}`}
+                className={`fixed inset-0 z-[9999] bg-[#07111f] flex items-center justify-center pointer-events-none ${!showPreloader ? 'pointer-events-none opacity-0' : ''}`}
                 style={{ display: showPreloader ? 'flex' : 'none' }} // Quick fix so it exits DOM visually after fade
             >
                 {showPreloader && (
@@ -224,10 +224,10 @@ export default function Dashboard() {
                     >
                         <div className="flex items-center justify-center gap-4 mb-2">
                             <motion.div animate={{ boxShadow: ['0 0 24px rgba(0,255,136,0.25)', '0 0 64px rgba(0,255,136,0.65)', '0 0 24px rgba(0,255,136,0.25)'] }} transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: 52, height: 52, borderRadius: 14, background: 'linear-gradient(135deg, rgba(0,255,136,0.22) 0%, rgba(0,204,106,0.07) 100%)', border: '1.5px solid rgba(0,255,136,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                <Brain size={26} style={{ color: '#00ff88' }} />
+                                <Brain size={26} className="brand-logo" />
                             </motion.div>
                             <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '32px', fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase', background: 'linear-gradient(170deg, #ffffff 10%, #d1fae5 55%, #6ee7b7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>
-                                MINDCARE AI
+                                EMOTIX
                             </span>
                         </div>
                         <div className="w-48 h-1 bg-white/10 rounded-full overflow-hidden mt-2">
@@ -242,13 +242,13 @@ export default function Dashboard() {
                 )}
             </motion.div>
 
-            <div className="min-h-screen bg-[#04100c] text-slate-200 font-sans relative overflow-x-hidden">
+            <div className="min-h-screen bg-[#07111f] text-slate-200 font-sans relative overflow-x-hidden">
                 {/* 1. The 3D Wave Background */}
                 <div className="fixed inset-0 z-0 pointer-events-none">
                 </div>
 
                 {/* 2. The Dark Gradient Overlay (for depth) */}
-                <div className="fixed inset-0 z-[1] pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,#04100c_80%)] opacity-80" />
+                <div className="fixed inset-0 z-[1] pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,#07111f_80%)] opacity-80" />
 
                 {/* Main Content */}
                 <div className="relative z-10 px-4 sm:px-10 xl:px-16 pb-32 max-w-[1600px] w-full mx-auto pt-24">
@@ -260,10 +260,10 @@ export default function Dashboard() {
                         title="Go to Home"
                     >
                         <motion.div animate={{ boxShadow: ['0 0 30px rgba(0,255,136,0.3)', '0 0 80px rgba(0,255,136,0.7)', '0 0 30px rgba(0,255,136,0.3)'] }} transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: 72, height: 72, borderRadius: 20, background: 'linear-gradient(135deg, rgba(0,255,136,0.22) 0%, rgba(0,204,106,0.07) 100%)', border: '2px solid rgba(0,255,136,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                            <Brain size={38} style={{ color: '#00ff88' }} />
+                            <Brain size={38} className="brand-logo" />
                         </motion.div>
                         <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '52px', fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase', background: 'linear-gradient(170deg, #ffffff 10%, #d1fae5 55%, #6ee7b7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>
-                            MINDCARE AI
+                            EMOTIX
                         </span>
                     </div>
 
@@ -476,7 +476,7 @@ export default function Dashboard() {
                                                 <XAxis dataKey="date" stroke="rgba(255,255,255,0.1)" tick={{ fill: '#94a3b8', fontSize: 12 }} tickMargin={10} axisLine={false} />
                                                 <YAxis domain={[0, 10]} stroke="rgba(255,255,255,0.1)" tick={{ fill: '#94a3b8', fontSize: 12 }} axisLine={false} tickLine={false} allowDataOverflow={true} />
                                                 <Tooltip content={<CustomTooltip />} cursor={{ stroke: 'rgba(255,255,255,0.1)', strokeWidth: 1, strokeDasharray: '4 4' }} />
-                                                <Area type="monotone" dataKey="score" name="Severity" stroke="#34d399" strokeWidth={4} fillOpacity={1} fill="url(#colorScore)" activeDot={{ r: 8, fill: '#04100c', stroke: '#34d399', strokeWidth: 3 }} dot={{ fill: '#04100c', stroke: '#34d399', strokeWidth: 2, r: 5 }} filter="url(#glow)" />
+                                                <Area type="monotone" dataKey="score" name="Severity" stroke="#e2e8f0" strokeWidth={4} fillOpacity={1} fill="url(#colorScore)" activeDot={{ r: 8, fill: '#07111f', stroke: '#e2e8f0', strokeWidth: 3 }} dot={{ fill: '#07111f', stroke: '#e2e8f0', strokeWidth: 2, r: 5 }} filter="url(#glow)" />
                                             </AreaChart>
                                         </ResponsiveContainer>
                                     </div>
@@ -679,7 +679,7 @@ export default function Dashboard() {
                                         <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-[3px] border-[#0a1511] rounded-full shadow-[0_0_10px_#34d399]"></div>
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-slate-100 text-lg tracking-wide">Dr. MindCare</h3>
+                                        <h3 className="font-bold text-slate-100 text-lg tracking-wide">Dr. Emotix</h3>
                                         <div className="flex items-center gap-1.5">
                                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                                             <span className="text-xs text-emerald-400/80 font-medium uppercase tracking-widest">AI Therapist Online</span>
@@ -870,7 +870,7 @@ export default function Dashboard() {
                 {/* Edit Profile Modal */}
                 {showEditModal && (
                     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-md p-4">
-                        <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="bg-[#0a1511] border border-white/10 rounded-3xl p-8 w-full max-w-lg shadow-[0_40px_80px_rgba(0,0,0,0.5)] relative max-h-[90vh] overflow-y-auto custom-scrollbar">
+                        <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="bg-[#0b1220] border border-white/10 rounded-3xl p-8 w-full max-w-lg shadow-[0_40px_80px_rgba(0,0,0,0.5)] relative max-h-[90vh] overflow-y-auto custom-scrollbar">
                             <button onClick={() => setShowEditModal(false)} className="absolute top-6 right-6 text-slate-500 hover:text-white transition-colors"><X size={24} /></button>
                             <h2 className="text-3xl font-bold text-white mb-8 font-display tracking-tight">Edit Profile</h2>
                             <form onSubmit={handleEditSave} className="space-y-4">

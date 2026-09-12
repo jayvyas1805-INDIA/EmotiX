@@ -4,7 +4,7 @@ const API = axios.create({ baseURL: 'https://hashmil-muahmmed08-mindcare-backend
 
 // Auto-attach JWT token
 API.interceptors.request.use(config => {
-    const token = localStorage.getItem('mindcare_token')
+    const token = localStorage.getItem('emotix_token')
     if (token) config.headers.Authorization = `Bearer ${token}`
     return config
 })
@@ -14,8 +14,8 @@ API.interceptors.response.use(
     res => res,
     err => {
         if (err.response?.status === 401) {
-            localStorage.removeItem('mindcare_token')
-            localStorage.removeItem('mindcare_user')
+            localStorage.removeItem('emotix_token')
+            localStorage.removeItem('emotix_user')
             window.location.href = '/login'
         }
         return Promise.reject(err)

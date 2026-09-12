@@ -1,7 +1,7 @@
 import sqlite3
 import os
 
-DB_PATH = 'd:/MindCare-AI/backend/mindcare.db'
+DB_PATH = 'd:/EmotiX-main/EmotiX-main/backend/mindcare.db'
 
 def migrate():
     if not os.path.exists(DB_PATH):

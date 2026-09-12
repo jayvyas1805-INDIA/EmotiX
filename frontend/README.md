@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 MindCare AI — Frontend Application
+# 🧠 Emotix — Frontend Application
 
 **A Smart Mental Health Counselling System powered by Multimodal AI**
 
@@ -18,7 +18,7 @@
 
 ## 📖 Description
 
-This is the **React Single Page Application (SPA)** frontend for the MindCare AI platform — a multimodal mental health counselling system. It guides users through a fully animated assessment journey covering **behavioural questionnaires**, **facial emotion detection**, **voice mood analysis**, and **AI-powered counselling chat** to produce a personalised mental wellness report.
+This is the **React Single Page Application (SPA)** frontend for the Emotix platform — a multimodal mental health counselling system. It guides users through a fully animated assessment journey covering **behavioural questionnaires**, **facial emotion detection**, **voice mood analysis**, and **AI-powered counselling chat** to produce a personalised mental wellness report.
 
 The application features a premium **glassmorphism dark UI**, a **WebGL particle background** on the landing page (Three.js + React Three Fiber), **cinematic page transitions** (Framer Motion + GSAP), and connects to a **FastAPI backend** hosted on Hugging Face Spaces.
 
@@ -228,4 +228,4 @@ The UI is built on a **dark glassmorphism** design language with the following c
 
 ## 📄 License
 
-This project is developed as part of an academic research initiative. All rights reserved © 2025 MindCare AI.
+This project is developed as part of an academic research initiative. All rights reserved © 2025 Emotix.

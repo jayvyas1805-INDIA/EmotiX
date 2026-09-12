@@ -60,7 +60,7 @@ export default function FinalSeverity() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                     className="fixed inset-0 z-[9999] flex items-center justify-center"
-                    style={{ background: '#04100c' }} // Dark premium bg
+                    style={{ background: '#07111f' }} // Dark premium bg
                 >
                     <motion.div
                         initial={{ scale: 0.9, opacity: 0 }}
@@ -69,10 +69,10 @@ export default function FinalSeverity() {
                     >
                             <div className="flex items-center justify-center gap-4 mb-2">
                                 <motion.div animate={{ boxShadow: ['0 0 24px rgba(0,255,136,0.25)', '0 0 64px rgba(0,255,136,0.65)', '0 0 24px rgba(0,255,136,0.25)'] }} transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: 52, height: 52, borderRadius: 14, background: 'linear-gradient(135deg, rgba(0,255,136,0.22) 0%, rgba(0,204,106,0.07) 100%)', border: '1.5px solid rgba(0,255,136,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                    <Brain size={26} style={{ color: '#00ff88' }} />
+                                    <Brain size={26} className="brand-logo" />
                                 </motion.div>
                                 <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '32px', fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase', background: 'linear-gradient(170deg, #ffffff 10%, #d1fae5 55%, #6ee7b7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>
-                                    MINDCARE AI
+                                    EMOTIX
                                 </span>
                             </div>
                             <div className="text-center">
@@ -98,7 +98,7 @@ export default function FinalSeverity() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                     className="fixed inset-0 z-[9999] flex items-center justify-center"
-                    style={{ background: '#04100c' }} // Dark premium bg
+                    style={{ background: '#07111f' }} // Dark premium bg
                 >
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -106,7 +106,7 @@ export default function FinalSeverity() {
                         className="text-center flex flex-col items-center gap-6"
                     >
                         <div className="relative">
-                            <div className="w-16 h-16 border-4 border-[#00ff88]/20 border-t-[#00ff88] rounded-full animate-spin" style={{ boxShadow: '0 0 30px rgba(0,255,136,0.2)' }} />
+                            <div className="w-16 h-16 border-4 border-white/20 border-t-white rounded-full animate-spin" style={{ boxShadow: '0 0 30px rgba(248,250,252,0.16)' }} />
                         </div>
                         <p className="text-slate-300 font-medium tracking-widest uppercase text-sm" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                             Processing Multimodal Severity Score...
@@ -118,13 +118,13 @@ export default function FinalSeverity() {
     }
 
     return (
-        <div className="min-h-screen bg-[#04100c] text-slate-200 font-sans relative overflow-x-hidden">
+        <div className="min-h-screen bg-[#07111f] text-slate-200 font-sans relative overflow-x-hidden">
             {/* 1. The 3D Wave Background */}
             <div className="fixed inset-0 z-0 pointer-events-none">
             </div>
 
             {/* 2. The Dark Gradient Overlay (for depth) */}
-            <div className="fixed inset-0 z-[1] pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,#04100c_80%)] opacity-80" />
+            <div className="fixed inset-0 z-[1] pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,#07111f_80%)] opacity-80" />
 
             {/* 3. The Main Content (Must be z-10 and relative) */}
             <div className="relative z-10 flex flex-col items-center justify-start pt-12 pb-24 px-4 min-h-screen">
@@ -133,10 +133,10 @@ export default function FinalSeverity() {
                         {/* Premium Branded Header - SCALED UP */}
                         <div className="flex items-center justify-center gap-6 mb-6 mt-4 print:hidden w-full">
                             <motion.div animate={{ boxShadow: ['0 0 30px rgba(0,255,136,0.3)', '0 0 80px rgba(0,255,136,0.7)', '0 0 30px rgba(0,255,136,0.3)'] }} transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: 72, height: 72, borderRadius: 20, background: 'linear-gradient(135deg, rgba(0,255,136,0.22) 0%, rgba(0,204,106,0.07) 100%)', border: '2px solid rgba(0,255,136,0.45)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                <Brain size={38} style={{ color: '#00ff88' }} />
+                                <Brain size={38} className="brand-logo" />
                             </motion.div>
                             <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '52px', fontWeight: 800, letterSpacing: '0.09em', textTransform: 'uppercase', background: 'linear-gradient(170deg, #ffffff 10%, #d1fae5 55%, #6ee7b7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', display: 'inline-block' }}>
-                                MINDCARE AI
+                                EMOTIX
                             </span>
                         </div>
                         <div className="text-center mb-10">
